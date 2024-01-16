@@ -12,27 +12,27 @@
   <Part Number>: GW2A-LV18PG256C8/I7
   <Device>: GW2A-18
   <Device Version>: C
-  <Created Time>:Tue Jan 16 20:03:34 2024
+  <Created Time>:Tue Jan 16 20:15:29 2024
 
 
 2. PnR Details
 
   Running placement:
     Placement Phase 0: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
-    Placement Phase 1: CPU time = 0h 0m 0.338s, Elapsed time = 0h 0m 0.339s
+    Placement Phase 1: CPU time = 0h 0m 0.325s, Elapsed time = 0h 0m 0.324s
     Placement Phase 2: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
-    Placement Phase 3: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
-    Total Placement: CPU time = 0h 0m 9s, Elapsed time = 0h 0m 9s
+    Placement Phase 3: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
+    Total Placement: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s
  Running routing:
-    Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.002s
-    Routing Phase 1: CPU time = 0h 0m 0.44s, Elapsed time = 0h 0m 0.439s
+    Routing Phase 0: CPU time = 0h 0m 0.002s, Elapsed time = 0h 0m 0.002s
+    Routing Phase 1: CPU time = 0h 0m 0.459s, Elapsed time = 0h 0m 0.459s
     Routing Phase 2: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
     Total Routing: CPU time = 0h 0m 5s, Elapsed time = 0h 0m 5s
  Generate output files:
     CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
 
- Total Time and Memory Usage: CPU time = 0h 0m 18s, Elapsed time = 0h 0m 18s, Peak memory usage = 308MB
+ Total Time and Memory Usage: CPU time = 0h 0m 15s, Elapsed time = 0h 0m 15s, Peak memory usage = 317MB
 
 
 3. Resource Usage Summary
@@ -48,7 +48,7 @@
     --Logic Register as FF    | 2148/15552  14%
     --I/O Register as Latch   | 0/621  0%
     --I/O Register as FF      | 4/621  <1%
-  CLS                         | 3306/10368  32%
+  CLS                         | 3284/10368  32%
   I/O Port                    | 78
   I/O Buf                     | 71
     --Input Buf               | 13
@@ -64,8 +64,9 @@
     --SDPB                    | 22
     --SDPX9B                  | 8
     --DPB                     | 12
-  DSP                         | 48%
-    --MULT18X18               | 3
+  DSP                         | 50%
+    --MULT18X18               | 2
+    --MULTALU36X18            | 1
     --MULTADDALU18X18         | 10
   PLL                         | 3/4  75%
   DCS                         | 0/8  0%

@@ -71,8 +71,8 @@ parameter RD_VIDEO_WIDTH      = 32;    //读视频数据位宽
 ////////// 图像缩放控制参数,很重要,只需要改这里就可以控制输出分辨率了
 parameter INPUT_VIDEO_WIDTH   = 640;   // 输入视频宽度
 parameter INPUT_VIDEO_HIGTH   = 480;   // 输入视频高度
-parameter OUTPUT_VIDEO_WIDTH  = 640;   // 输出视频宽度
-parameter OUTPUT_VIDEO_HIGTH  = 480;   // 输出视频高度
+parameter OUTPUT_VIDEO_WIDTH  = 64;   // 输出视频宽度
+parameter OUTPUT_VIDEO_HIGTH  = 64;   // 输出视频高度
 
 wire video_clk;         //video pixel clock
 wire serial_clk;
