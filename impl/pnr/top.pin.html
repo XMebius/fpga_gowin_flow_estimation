@@ -50,15 +50,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Design File</td>
-<td>Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\impl\gwsynthesis\top.vg</td>
+<td>Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\impl\gwsynthesis\top.vg</td>
 </tr>
 <tr>
 <td class="label">Physical Constraints File</td>
-<td>Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\src\top.cst</td>
+<td>Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.cst</td>
 </tr>
 <tr>
 <td class="label">Timing Constraints File</td>
-<td>Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\src\lcd.sdc</td>
+<td>Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\lcd.sdc</td>
 </tr>
 <tr>
 <td class="label">Version</td>
@@ -78,7 +78,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Tue Jan 16 19:43:52 2024
+<td>Tue Jan 16 20:03:34 2024
 </td>
 </tr>
 <tr>
@@ -123,7 +123,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">rst_n</td>
@@ -144,12 +144,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">cmos_vsync</td>
+<td class="label">cam_vsync</td>
 <td></td>
-<td>G15/0</td>
+<td>T7/3</td>
 <td>Y</td>
 <td>in</td>
-<td>IOT13[A]</td>
+<td>IOR29[A]</td>
 <td>LVCMOS33</td>
 <td>NA</td>
 <td>UP</td>
@@ -157,17 +157,17 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NONE</td>
 <td>NA</td>
 <td>NA</td>
-<td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
 <tr>
-<td class="label">cmos_href</td>
+<td class="label">cam_href</td>
 <td></td>
-<td>G14/0</td>
+<td>R8/3</td>
 <td>Y</td>
 <td>in</td>
-<td>IOT13[B]</td>
+<td>IOR29[B]</td>
 <td>LVCMOS33</td>
 <td>NA</td>
 <td>UP</td>
@@ -175,17 +175,17 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NONE</td>
 <td>NA</td>
 <td>NA</td>
-<td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
 <tr>
-<td class="label">cmos_pclk</td>
+<td class="label">cam_pclk</td>
 <td></td>
-<td>F13/0</td>
+<td>T6/3</td>
 <td>Y</td>
 <td>in</td>
-<td>IOT8[A]</td>
+<td>IOR53[B]</td>
 <td>LVCMOS33</td>
 <td>NA</td>
 <td>UP</td>
@@ -193,12 +193,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NONE</td>
 <td>NA</td>
 <td>NA</td>
-<td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
 <tr>
-<td class="label">cmos_db[0]</td>
+<td class="label">cam_data[0]</td>
 <td></td>
 <td>T12/2</td>
 <td>Y</td>
@@ -216,7 +216,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.2</td>
 </tr>
 <tr>
-<td class="label">cmos_db[1]</td>
+<td class="label">cam_data[1]</td>
 <td></td>
 <td>T11/2</td>
 <td>Y</td>
@@ -234,7 +234,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.2</td>
 </tr>
 <tr>
-<td class="label">cmos_db[2]</td>
+<td class="label">cam_data[2]</td>
 <td></td>
 <td>P11/2</td>
 <td>Y</td>
@@ -252,7 +252,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.2</td>
 </tr>
 <tr>
-<td class="label">cmos_db[3]</td>
+<td class="label">cam_data[3]</td>
 <td></td>
 <td>R11/2</td>
 <td>Y</td>
@@ -270,7 +270,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.2</td>
 </tr>
 <tr>
-<td class="label">cmos_db[4]</td>
+<td class="label">cam_data[4]</td>
 <td></td>
 <td>M15/1</td>
 <td>Y</td>
@@ -288,7 +288,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>3.3</td>
 </tr>
 <tr>
-<td class="label">cmos_db[5]</td>
+<td class="label">cam_data[5]</td>
 <td></td>
 <td>M14/1</td>
 <td>Y</td>
@@ -306,7 +306,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>3.3</td>
 </tr>
 <tr>
-<td class="label">cmos_db[6]</td>
+<td class="label">cam_data[6]</td>
 <td></td>
 <td>J16/0</td>
 <td>Y</td>
@@ -321,10 +321,10 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
-<td class="label">cmos_db[7]</td>
+<td class="label">cam_data[7]</td>
 <td></td>
 <td>J14/0</td>
 <td>Y</td>
@@ -339,51 +339,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
-<td class="label">cmos_xclk</td>
+<td class="label">cam_xclk</td>
 <td></td>
-<td>G12/0</td>
+<td>P6/3</td>
 <td>Y</td>
 <td>out</td>
-<td>IOT8[B]</td>
-<td>LVCMOS33</td>
-<td>8</td>
-<td>UP</td>
-<td>NA</td>
-<td>NA</td>
-<td>OFF</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>3.3</td>
-</tr>
-<tr>
-<td class="label">cmos_rst_n</td>
-<td></td>
-<td>L13/1</td>
-<td>Y</td>
-<td>out</td>
-<td>IOT38[B]</td>
-<td>LVCMOS33</td>
-<td>8</td>
-<td>UP</td>
-<td>NA</td>
-<td>NA</td>
-<td>OFF</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>3.3</td>
-</tr>
-<tr>
-<td class="label">cmos_pwdn</td>
-<td></td>
-<td>C10/3</td>
-<td>Y</td>
-<td>out</td>
-<td>IOR39[A]</td>
+<td>IOR53[A]</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>UP</td>
@@ -392,6 +356,114 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>OFF</td>
 <td>NA</td>
 <td>OFF</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">cam_rst_n</td>
+<td></td>
+<td>P9/3</td>
+<td>Y</td>
+<td>out</td>
+<td>IOR38[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">cam_pwdn</td>
+<td></td>
+<td>T9/3</td>
+<td>Y</td>
+<td>out</td>
+<td>IOR38[A]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">O_tmds_clk_p</td>
+<td>O_tmds_clk_n</td>
+<td>G16,H15/0</td>
+<td>Y</td>
+<td>out</td>
+<td>IOT16</td>
+<td>LVDS25</td>
+<td>3.5</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td class="label">O_tmds_data_p[0]</td>
+<td>O_tmds_data_n[0]</td>
+<td>H14,H16/0</td>
+<td>Y</td>
+<td>out</td>
+<td>IOT20</td>
+<td>LVDS25</td>
+<td>3.5</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td class="label">O_tmds_data_p[1]</td>
+<td>O_tmds_data_n[1]</td>
+<td>J15,K16/0</td>
+<td>Y</td>
+<td>out</td>
+<td>IOT24</td>
+<td>LVDS25</td>
+<td>3.5</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td class="label">O_tmds_data_p[2]</td>
+<td>O_tmds_data_n[2]</td>
+<td>K14,K15/1</td>
+<td>Y</td>
+<td>out</td>
+<td>IOT30</td>
+<td>LVDS25</td>
+<td>3.5</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
@@ -468,7 +540,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>3.3</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[0]</td>
+<td class="label">O_ddr_addr[0]</td>
 <td></td>
 <td>F7/6</td>
 <td>Y</td>
@@ -486,7 +558,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[1]</td>
+<td class="label">O_ddr_addr[1]</td>
 <td></td>
 <td>A4/5</td>
 <td>Y</td>
@@ -504,7 +576,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[2]</td>
+<td class="label">O_ddr_addr[2]</td>
 <td></td>
 <td>D6/5</td>
 <td>Y</td>
@@ -522,7 +594,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[3]</td>
+<td class="label">O_ddr_addr[3]</td>
 <td></td>
 <td>F8/6</td>
 <td>Y</td>
@@ -540,7 +612,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[4]</td>
+<td class="label">O_ddr_addr[4]</td>
 <td></td>
 <td>C4/6</td>
 <td>Y</td>
@@ -558,7 +630,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[5]</td>
+<td class="label">O_ddr_addr[5]</td>
 <td></td>
 <td>E6/6</td>
 <td>Y</td>
@@ -576,7 +648,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[6]</td>
+<td class="label">O_ddr_addr[6]</td>
 <td></td>
 <td>B1/5</td>
 <td>Y</td>
@@ -594,7 +666,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[7]</td>
+<td class="label">O_ddr_addr[7]</td>
 <td></td>
 <td>D8/6</td>
 <td>Y</td>
@@ -612,7 +684,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[8]</td>
+<td class="label">O_ddr_addr[8]</td>
 <td></td>
 <td>A5/5</td>
 <td>Y</td>
@@ -630,7 +702,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[9]</td>
+<td class="label">O_ddr_addr[9]</td>
 <td></td>
 <td>F9/6</td>
 <td>Y</td>
@@ -648,7 +720,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[10]</td>
+<td class="label">O_ddr_addr[10]</td>
 <td></td>
 <td>K3/4</td>
 <td>Y</td>
@@ -666,7 +738,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[11]</td>
+<td class="label">O_ddr_addr[11]</td>
 <td></td>
 <td>B7/6</td>
 <td>Y</td>
@@ -684,7 +756,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[12]</td>
+<td class="label">O_ddr_addr[12]</td>
 <td></td>
 <td>A3/5</td>
 <td>Y</td>
@@ -702,7 +774,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_addr[13]</td>
+<td class="label">O_ddr_addr[13]</td>
 <td></td>
 <td>C8/6</td>
 <td>Y</td>
@@ -720,7 +792,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_bank[0]</td>
+<td class="label">O_ddr_ba[0]</td>
 <td></td>
 <td>H4/5</td>
 <td>Y</td>
@@ -738,7 +810,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_bank[1]</td>
+<td class="label">O_ddr_ba[1]</td>
 <td></td>
 <td>D3/5</td>
 <td>Y</td>
@@ -756,7 +828,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_bank[2]</td>
+<td class="label">O_ddr_ba[2]</td>
 <td></td>
 <td>H5/4</td>
 <td>Y</td>
@@ -774,7 +846,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_cs</td>
+<td class="label">O_ddr_cs_n</td>
 <td></td>
 <td>P5/4</td>
 <td>Y</td>
@@ -792,7 +864,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_ras</td>
+<td class="label">O_ddr_ras_n</td>
 <td></td>
 <td>R4/4</td>
 <td>Y</td>
@@ -810,7 +882,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_cas</td>
+<td class="label">O_ddr_cas_n</td>
 <td></td>
 <td>R6/4</td>
 <td>Y</td>
@@ -828,7 +900,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_we</td>
+<td class="label">O_ddr_we_n</td>
 <td></td>
 <td>L2/4</td>
 <td>Y</td>
@@ -846,8 +918,8 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_ck</td>
-<td>ddr_ck_n</td>
+<td class="label">O_ddr_clk</td>
+<td>O_ddr_clk_n</td>
 <td>J1,J3/5</td>
 <td>Y</td>
 <td>out</td>
@@ -864,7 +936,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_cke</td>
+<td class="label">O_ddr_cke</td>
 <td></td>
 <td>J2/4</td>
 <td>Y</td>
@@ -882,7 +954,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_odt</td>
+<td class="label">O_ddr_odt</td>
 <td></td>
 <td>R3/4</td>
 <td>Y</td>
@@ -900,7 +972,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_reset_n</td>
+<td class="label">O_ddr_reset_n</td>
 <td></td>
 <td>B9/6</td>
 <td>Y</td>
@@ -918,7 +990,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dm[0]</td>
+<td class="label">O_ddr_dqm[0]</td>
 <td></td>
 <td>G1/5</td>
 <td>Y</td>
@@ -936,7 +1008,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dm[1]</td>
+<td class="label">O_ddr_dqm[1]</td>
 <td></td>
 <td>K5/4</td>
 <td>Y</td>
@@ -954,84 +1026,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">O_tmds_clk_p</td>
-<td>O_tmds_clk_n</td>
-<td>G16,H15/0</td>
-<td>Y</td>
-<td>out</td>
-<td>IOT16</td>
-<td>LVDS25</td>
-<td>3.5</td>
-<td>NONE</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>3.3</td>
-</tr>
-<tr>
-<td class="label">O_tmds_data_p[0]</td>
-<td>O_tmds_data_n[0]</td>
-<td>H14,H16/0</td>
-<td>Y</td>
-<td>out</td>
-<td>IOT20</td>
-<td>LVDS25</td>
-<td>3.5</td>
-<td>NONE</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>3.3</td>
-</tr>
-<tr>
-<td class="label">O_tmds_data_p[1]</td>
-<td>O_tmds_data_n[1]</td>
-<td>J15,K16/0</td>
-<td>Y</td>
-<td>out</td>
-<td>IOT24</td>
-<td>LVDS25</td>
-<td>3.5</td>
-<td>NONE</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>3.3</td>
-</tr>
-<tr>
-<td class="label">O_tmds_data_p[2]</td>
-<td>O_tmds_data_n[2]</td>
-<td>K14,K15/1</td>
-<td>Y</td>
-<td>out</td>
-<td>IOT30</td>
-<td>LVDS25</td>
-<td>3.5</td>
-<td>NONE</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>3.3</td>
-</tr>
-<tr>
-<td class="label">cmos_scl</td>
+<td class="label">cam_scl</td>
 <td></td>
-<td>F14/0</td>
+<td>T8/3</td>
 <td>Y</td>
 <td>io</td>
-<td>IOT9[A]</td>
+<td>IOR42[B]</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>UP</td>
@@ -1039,17 +1039,17 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NONE</td>
 <td>OFF</td>
 <td>NA</td>
-<td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
 <tr>
-<td class="label">cmos_sda</td>
+<td class="label">cam_sda</td>
 <td></td>
-<td>F16/0</td>
+<td>P8/3</td>
 <td>Y</td>
 <td>io</td>
-<td>IOT9[B]</td>
+<td>IOR42[A]</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>UP</td>
@@ -1057,12 +1057,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NONE</td>
 <td>OFF</td>
 <td>NA</td>
-<td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[0]</td>
+<td class="label">IO_ddr_dq[0]</td>
 <td></td>
 <td>G5/5</td>
 <td>Y</td>
@@ -1080,7 +1080,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[1]</td>
+<td class="label">IO_ddr_dq[1]</td>
 <td></td>
 <td>F5/5</td>
 <td>Y</td>
@@ -1098,7 +1098,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[2]</td>
+<td class="label">IO_ddr_dq[2]</td>
 <td></td>
 <td>F4/5</td>
 <td>Y</td>
@@ -1116,7 +1116,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[3]</td>
+<td class="label">IO_ddr_dq[3]</td>
 <td></td>
 <td>F3/5</td>
 <td>Y</td>
@@ -1134,7 +1134,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[4]</td>
+<td class="label">IO_ddr_dq[4]</td>
 <td></td>
 <td>E2/5</td>
 <td>Y</td>
@@ -1152,7 +1152,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[5]</td>
+<td class="label">IO_ddr_dq[5]</td>
 <td></td>
 <td>C1/5</td>
 <td>Y</td>
@@ -1170,7 +1170,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[6]</td>
+<td class="label">IO_ddr_dq[6]</td>
 <td></td>
 <td>E1/5</td>
 <td>Y</td>
@@ -1188,7 +1188,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[7]</td>
+<td class="label">IO_ddr_dq[7]</td>
 <td></td>
 <td>B3/5</td>
 <td>Y</td>
@@ -1206,7 +1206,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[8]</td>
+<td class="label">IO_ddr_dq[8]</td>
 <td></td>
 <td>M3/4</td>
 <td>Y</td>
@@ -1224,7 +1224,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[9]</td>
+<td class="label">IO_ddr_dq[9]</td>
 <td></td>
 <td>K4/4</td>
 <td>Y</td>
@@ -1242,7 +1242,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[10]</td>
+<td class="label">IO_ddr_dq[10]</td>
 <td></td>
 <td>N2/4</td>
 <td>Y</td>
@@ -1260,7 +1260,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[11]</td>
+<td class="label">IO_ddr_dq[11]</td>
 <td></td>
 <td>L1/4</td>
 <td>Y</td>
@@ -1278,7 +1278,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[12]</td>
+<td class="label">IO_ddr_dq[12]</td>
 <td></td>
 <td>P4/4</td>
 <td>Y</td>
@@ -1296,7 +1296,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[13]</td>
+<td class="label">IO_ddr_dq[13]</td>
 <td></td>
 <td>H3/4</td>
 <td>Y</td>
@@ -1314,7 +1314,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[14]</td>
+<td class="label">IO_ddr_dq[14]</td>
 <td></td>
 <td>R1/4</td>
 <td>Y</td>
@@ -1332,7 +1332,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dq[15]</td>
+<td class="label">IO_ddr_dq[15]</td>
 <td></td>
 <td>M2/4</td>
 <td>Y</td>
@@ -1350,8 +1350,8 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dqs[0]</td>
-<td>ddr_dqs_n[0]</td>
+<td class="label">IO_ddr_dqs[0]</td>
+<td>IO_ddr_dqs_n[0]</td>
 <td>G2,G3/5</td>
 <td>Y</td>
 <td>io</td>
@@ -1368,8 +1368,8 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>1.5</td>
 </tr>
 <tr>
-<td class="label">ddr_dqs[1]</td>
-<td>ddr_dqs_n[1]</td>
+<td class="label">IO_ddr_dqs[1]</td>
+<td>IO_ddr_dqs_n[1]</td>
 <td>J5,K6/4</td>
 <td>Y</td>
 <td>io</td>
@@ -1419,7 +1419,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">D16/0</td>
@@ -1435,7 +1435,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">E14/0</td>
@@ -1451,7 +1451,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">C16/0</td>
@@ -1467,7 +1467,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">D15/0</td>
@@ -1483,7 +1483,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">E16/0</td>
@@ -1499,7 +1499,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">F15/0</td>
@@ -1515,14 +1515,14 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">F13/0</td>
-<td>cmos_pclk</td>
+<td>-</td>
 <td>in</td>
 <td>IOT8[A]</td>
-<td>LVCMOS33</td>
+<td>LVCMOS18</td>
 <td>NA</td>
 <td>UP</td>
 <td>ON</td>
@@ -1531,55 +1531,55 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">G12/0</td>
-<td>cmos_xclk</td>
-<td>out</td>
+<td>-</td>
+<td>in</td>
 <td>IOT8[B]</td>
-<td>LVCMOS33</td>
-<td>8</td>
+<td>LVCMOS18</td>
+<td>NA</td>
 <td>UP</td>
+<td>ON</td>
+<td>NONE</td>
 <td>NA</td>
 <td>NA</td>
-<td>OFF</td>
 <td>NA</td>
 <td>NA</td>
-<td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">F14/0</td>
-<td>cmos_scl</td>
-<td>io</td>
+<td>-</td>
+<td>in</td>
 <td>IOT9[A]</td>
-<td>LVCMOS33</td>
-<td>8</td>
+<td>LVCMOS18</td>
+<td>NA</td>
 <td>UP</td>
-<td>NA</td>
+<td>ON</td>
 <td>NONE</td>
-<td>OFF</td>
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>NA</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">F16/0</td>
-<td>cmos_sda</td>
-<td>io</td>
+<td>-</td>
+<td>in</td>
 <td>IOT9[B]</td>
-<td>LVCMOS33</td>
-<td>8</td>
+<td>LVCMOS18</td>
+<td>NA</td>
 <td>UP</td>
-<td>NA</td>
+<td>ON</td>
 <td>NONE</td>
-<td>OFF</td>
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>NA</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">F12/0</td>
@@ -1595,7 +1595,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">G13/0</td>
@@ -1611,14 +1611,14 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">G15/0</td>
-<td>cmos_vsync</td>
+<td>-</td>
 <td>in</td>
 <td>IOT13[A]</td>
-<td>LVCMOS33</td>
+<td>LVCMOS18</td>
 <td>NA</td>
 <td>UP</td>
 <td>ON</td>
@@ -1627,14 +1627,14 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">G14/0</td>
-<td>cmos_href</td>
+<td>-</td>
 <td>in</td>
 <td>IOT13[B]</td>
-<td>LVCMOS33</td>
+<td>LVCMOS18</td>
 <td>NA</td>
 <td>UP</td>
 <td>ON</td>
@@ -1643,7 +1643,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">G11/0</td>
@@ -1659,7 +1659,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">H12/0</td>
@@ -1675,7 +1675,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">G16/0</td>
@@ -1691,7 +1691,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">H15/0</td>
@@ -1707,7 +1707,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">H13/0</td>
@@ -1723,7 +1723,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">J12/0</td>
@@ -1739,7 +1739,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">H14/0</td>
@@ -1755,7 +1755,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">H16/0</td>
@@ -1771,11 +1771,11 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">J16/0</td>
-<td>cmos_db[6]</td>
+<td>cam_data[6]</td>
 <td>in</td>
 <td>IOT22[A]</td>
 <td>LVCMOS33</td>
@@ -1787,11 +1787,11 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">J14/0</td>
-<td>cmos_db[7]</td>
+<td>cam_data[7]</td>
 <td>in</td>
 <td>IOT22[B]</td>
 <td>LVCMOS33</td>
@@ -1803,7 +1803,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">J15/0</td>
@@ -1819,7 +1819,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">K16/0</td>
@@ -1835,7 +1835,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">H11/0</td>
@@ -1851,7 +1851,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">J13/0</td>
@@ -1867,7 +1867,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
-<td>3.3</td>
+<td>2.5</td>
 </tr>
 <tr>
 <td class="label">K14/1</td>
@@ -2015,15 +2015,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">L13/1</td>
-<td>cmos_rst_n</td>
-<td>out</td>
+<td>-</td>
+<td>in</td>
 <td>IOT38[B]</td>
-<td>LVCMOS33</td>
-<td>8</td>
+<td>LVCMOS18</td>
+<td>NA</td>
 <td>UP</td>
+<td>ON</td>
+<td>NONE</td>
 <td>NA</td>
-<td>NA</td>
-<td>OFF</td>
 <td>NA</td>
 <td>NA</td>
 <td>NA</td>
@@ -2031,7 +2031,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">M14/1</td>
-<td>cmos_db[5]</td>
+<td>cam_data[5]</td>
 <td>in</td>
 <td>IOT40[A]</td>
 <td>LVCMOS33</td>
@@ -2047,7 +2047,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">M15/1</td>
-<td>cmos_db[4]</td>
+<td>cam_data[4]</td>
 <td>in</td>
 <td>IOT40[B]</td>
 <td>LVCMOS33</td>
@@ -2191,7 +2191,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">A4/5</td>
-<td>ddr_addr[1]</td>
+<td>O_ddr_addr[1]</td>
 <td>out</td>
 <td>IOB2[A]</td>
 <td>SSTL15</td>
@@ -2223,7 +2223,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">D6/5</td>
-<td>ddr_addr[2]</td>
+<td>O_ddr_addr[2]</td>
 <td>out</td>
 <td>IOB3[A]</td>
 <td>SSTL15</td>
@@ -2255,7 +2255,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">A3/5</td>
-<td>ddr_addr[12]</td>
+<td>O_ddr_addr[12]</td>
 <td>out</td>
 <td>IOB4[A]</td>
 <td>SSTL15</td>
@@ -2287,7 +2287,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">A5/5</td>
-<td>ddr_addr[8]</td>
+<td>O_ddr_addr[8]</td>
 <td>out</td>
 <td>IOB7[A]</td>
 <td>SSTL15</td>
@@ -2319,7 +2319,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">B1/5</td>
-<td>ddr_addr[6]</td>
+<td>O_ddr_addr[6]</td>
 <td>out</td>
 <td>IOB8[A]</td>
 <td>SSTL15</td>
@@ -2351,7 +2351,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">D3/5</td>
-<td>ddr_bank[1]</td>
+<td>O_ddr_ba[1]</td>
 <td>out</td>
 <td>IOB9[A]</td>
 <td>SSTL15</td>
@@ -2383,7 +2383,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">E2/5</td>
-<td>ddr_dq[4]</td>
+<td>IO_ddr_dq[4]</td>
 <td>io</td>
 <td>IOB12[A]</td>
 <td>SSTL15</td>
@@ -2415,7 +2415,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">B3/5</td>
-<td>ddr_dq[7]</td>
+<td>IO_ddr_dq[7]</td>
 <td>io</td>
 <td>IOB13[A]</td>
 <td>SSTL15</td>
@@ -2447,7 +2447,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">C1/5</td>
-<td>ddr_dq[5]</td>
+<td>IO_ddr_dq[5]</td>
 <td>io</td>
 <td>IOB14[A]</td>
 <td>SSTL15</td>
@@ -2479,7 +2479,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">E1/5</td>
-<td>ddr_dq[6]</td>
+<td>IO_ddr_dq[6]</td>
 <td>io</td>
 <td>IOB16[A]</td>
 <td>SSTL15</td>
@@ -2511,7 +2511,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">F4/5</td>
-<td>ddr_dq[2]</td>
+<td>IO_ddr_dq[2]</td>
 <td>io</td>
 <td>IOB18[A]</td>
 <td>SSTL15</td>
@@ -2543,7 +2543,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">F3/5</td>
-<td>ddr_dq[3]</td>
+<td>IO_ddr_dq[3]</td>
 <td>io</td>
 <td>IOB19[A]</td>
 <td>SSTL15</td>
@@ -2575,7 +2575,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">G5/5</td>
-<td>ddr_dq[0]</td>
+<td>IO_ddr_dq[0]</td>
 <td>io</td>
 <td>IOB20[A]</td>
 <td>SSTL15</td>
@@ -2607,7 +2607,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">G2/5</td>
-<td>ddr_dqs[0]</td>
+<td>IO_ddr_dqs[0]</td>
 <td>io</td>
 <td>IOB21[A]</td>
 <td>SSTL15D</td>
@@ -2623,7 +2623,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">G3/5</td>
-<td>ddr_dqs_n[0]</td>
+<td>IO_ddr_dqs_n[0]</td>
 <td>io</td>
 <td>IOB21[B]</td>
 <td>SSTL15D</td>
@@ -2639,7 +2639,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">F5/5</td>
-<td>ddr_dq[1]</td>
+<td>IO_ddr_dq[1]</td>
 <td>io</td>
 <td>IOB22[A]</td>
 <td>SSTL15</td>
@@ -2671,7 +2671,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">G1/5</td>
-<td>ddr_dm[0]</td>
+<td>O_ddr_dqm[0]</td>
 <td>out</td>
 <td>IOB24[A]</td>
 <td>SSTL15</td>
@@ -2703,7 +2703,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">H4/5</td>
-<td>ddr_bank[0]</td>
+<td>O_ddr_ba[0]</td>
 <td>out</td>
 <td>IOB26[A]</td>
 <td>SSTL15</td>
@@ -2735,7 +2735,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">J1/5</td>
-<td>ddr_ck</td>
+<td>O_ddr_clk</td>
 <td>out</td>
 <td>IOB27[A]</td>
 <td>SSTL15D</td>
@@ -2751,7 +2751,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">J3/5</td>
-<td>ddr_ck_n</td>
+<td>O_ddr_clk_n</td>
 <td>out</td>
 <td>IOB27[B]</td>
 <td>SSTL15D</td>
@@ -2767,7 +2767,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">L2/4</td>
-<td>ddr_we</td>
+<td>O_ddr_we_n</td>
 <td>out</td>
 <td>IOB30[A]</td>
 <td>SSTL15</td>
@@ -2799,7 +2799,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">H3/4</td>
-<td>ddr_dq[13]</td>
+<td>IO_ddr_dq[13]</td>
 <td>io</td>
 <td>IOB32[A]</td>
 <td>SSTL15</td>
@@ -2831,7 +2831,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">J2/4</td>
-<td>ddr_cke</td>
+<td>O_ddr_cke</td>
 <td>out</td>
 <td>IOB34[A]</td>
 <td>SSTL15</td>
@@ -2863,7 +2863,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">H5/4</td>
-<td>ddr_bank[2]</td>
+<td>O_ddr_ba[2]</td>
 <td>out</td>
 <td>IOB35[A]</td>
 <td>SSTL15</td>
@@ -2895,7 +2895,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">K3/4</td>
-<td>ddr_addr[10]</td>
+<td>O_ddr_addr[10]</td>
 <td>out</td>
 <td>IOB36[A]</td>
 <td>SSTL15</td>
@@ -2927,7 +2927,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">J5/4</td>
-<td>ddr_dqs[1]</td>
+<td>IO_ddr_dqs[1]</td>
 <td>io</td>
 <td>IOB37[A]</td>
 <td>SSTL15D</td>
@@ -2943,7 +2943,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">K6/4</td>
-<td>ddr_dqs_n[1]</td>
+<td>IO_ddr_dqs_n[1]</td>
 <td>io</td>
 <td>IOB37[B]</td>
 <td>SSTL15D</td>
@@ -2959,7 +2959,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">L1/4</td>
-<td>ddr_dq[11]</td>
+<td>IO_ddr_dq[11]</td>
 <td>io</td>
 <td>IOB38[A]</td>
 <td>SSTL15</td>
@@ -2991,7 +2991,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">K4/4</td>
-<td>ddr_dq[9]</td>
+<td>IO_ddr_dq[9]</td>
 <td>io</td>
 <td>IOB39[A]</td>
 <td>SSTL15</td>
@@ -3023,7 +3023,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">K5/4</td>
-<td>ddr_dm[1]</td>
+<td>O_ddr_dqm[1]</td>
 <td>out</td>
 <td>IOB40[A]</td>
 <td>SSTL15</td>
@@ -3055,7 +3055,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">N2/4</td>
-<td>ddr_dq[10]</td>
+<td>IO_ddr_dq[10]</td>
 <td>io</td>
 <td>IOB41[A]</td>
 <td>SSTL15</td>
@@ -3087,7 +3087,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">M3/4</td>
-<td>ddr_dq[8]</td>
+<td>IO_ddr_dq[8]</td>
 <td>io</td>
 <td>IOB42[A]</td>
 <td>SSTL15</td>
@@ -3119,7 +3119,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">M2/4</td>
-<td>ddr_dq[15]</td>
+<td>IO_ddr_dq[15]</td>
 <td>io</td>
 <td>IOB43[A]</td>
 <td>SSTL15</td>
@@ -3151,7 +3151,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">R1/4</td>
-<td>ddr_dq[14]</td>
+<td>IO_ddr_dq[14]</td>
 <td>io</td>
 <td>IOB44[A]</td>
 <td>SSTL15</td>
@@ -3183,7 +3183,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">P4/4</td>
-<td>ddr_dq[12]</td>
+<td>IO_ddr_dq[12]</td>
 <td>io</td>
 <td>IOB45[A]</td>
 <td>SSTL15</td>
@@ -3215,7 +3215,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">R3/4</td>
-<td>ddr_odt</td>
+<td>O_ddr_odt</td>
 <td>out</td>
 <td>IOB48[A]</td>
 <td>SSTL15</td>
@@ -3247,7 +3247,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">P5/4</td>
-<td>ddr_cs</td>
+<td>O_ddr_cs_n</td>
 <td>out</td>
 <td>IOB50[A]</td>
 <td>SSTL15</td>
@@ -3279,7 +3279,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">R4/4</td>
-<td>ddr_ras</td>
+<td>O_ddr_ras_n</td>
 <td>out</td>
 <td>IOB52[A]</td>
 <td>SSTL15</td>
@@ -3311,7 +3311,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">R6/4</td>
-<td>ddr_cas</td>
+<td>O_ddr_cas_n</td>
 <td>out</td>
 <td>IOB54[A]</td>
 <td>SSTL15</td>
@@ -3599,7 +3599,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">C8/6</td>
-<td>ddr_addr[13]</td>
+<td>O_ddr_addr[13]</td>
 <td>out</td>
 <td>IOL29[A]</td>
 <td>SSTL15</td>
@@ -3631,7 +3631,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">F9/6</td>
-<td>ddr_addr[9]</td>
+<td>O_ddr_addr[9]</td>
 <td>out</td>
 <td>IOL31[A]</td>
 <td>SSTL15</td>
@@ -3663,7 +3663,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">B9/6</td>
-<td>ddr_reset_n</td>
+<td>O_ddr_reset_n</td>
 <td>out</td>
 <td>IOL33[A]</td>
 <td>SSTL15</td>
@@ -3695,7 +3695,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">F8/6</td>
-<td>ddr_addr[3]</td>
+<td>O_ddr_addr[3]</td>
 <td>out</td>
 <td>IOL35[A]</td>
 <td>SSTL15</td>
@@ -3727,7 +3727,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">D8/6</td>
-<td>ddr_addr[7]</td>
+<td>O_ddr_addr[7]</td>
 <td>out</td>
 <td>IOL38[A]</td>
 <td>SSTL15</td>
@@ -3759,7 +3759,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">B7/6</td>
-<td>ddr_addr[11]</td>
+<td>O_ddr_addr[11]</td>
 <td>out</td>
 <td>IOL40[A]</td>
 <td>SSTL15</td>
@@ -3791,7 +3791,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">F7/6</td>
-<td>ddr_addr[0]</td>
+<td>O_ddr_addr[0]</td>
 <td>out</td>
 <td>IOL45[A]</td>
 <td>SSTL15</td>
@@ -3823,7 +3823,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">C4/6</td>
-<td>ddr_addr[4]</td>
+<td>O_ddr_addr[4]</td>
 <td>out</td>
 <td>IOL47[A]</td>
 <td>SSTL15</td>
@@ -3855,7 +3855,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">E6/6</td>
-<td>ddr_addr[5]</td>
+<td>O_ddr_addr[5]</td>
 <td>out</td>
 <td>IOL53[A]</td>
 <td>SSTL15</td>
@@ -3983,7 +3983,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">R11/2</td>
-<td>cmos_db[3]</td>
+<td>cam_data[3]</td>
 <td>in</td>
 <td>IOR17[A]</td>
 <td>LVCMOS33</td>
@@ -3999,7 +3999,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">T12/2</td>
-<td>cmos_db[0]</td>
+<td>cam_data[0]</td>
 <td>in</td>
 <td>IOR17[B]</td>
 <td>LVCMOS33</td>
@@ -4079,7 +4079,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">T11/2</td>
-<td>cmos_db[1]</td>
+<td>cam_data[1]</td>
 <td>in</td>
 <td>IOR24[A]</td>
 <td>LVCMOS33</td>
@@ -4095,7 +4095,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">P11/2</td>
-<td>cmos_db[2]</td>
+<td>cam_data[2]</td>
 <td>in</td>
 <td>IOR24[B]</td>
 <td>LVCMOS33</td>
@@ -4207,33 +4207,33 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">T7/3</td>
-<td>-</td>
+<td>cam_vsync</td>
 <td>in</td>
 <td>IOR29[A]</td>
-<td>LVCMOS18</td>
+<td>LVCMOS33</td>
 <td>NA</td>
 <td>UP</td>
 <td>ON</td>
 <td>NONE</td>
 <td>NA</td>
 <td>NA</td>
-<td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
 <tr>
 <td class="label">R8/3</td>
-<td>-</td>
+<td>cam_href</td>
 <td>in</td>
 <td>IOR29[B]</td>
-<td>LVCMOS18</td>
+<td>LVCMOS33</td>
 <td>NA</td>
 <td>UP</td>
 <td>ON</td>
 <td>NONE</td>
 <td>NA</td>
 <td>NA</td>
-<td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
@@ -4463,41 +4463,9 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">T9/3</td>
-<td>-</td>
-<td>in</td>
-<td>IOR38[A]</td>
-<td>LVCMOS18</td>
-<td>NA</td>
-<td>UP</td>
-<td>ON</td>
-<td>NONE</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>3.3</td>
-</tr>
-<tr>
-<td class="label">P9/3</td>
-<td>-</td>
-<td>in</td>
-<td>IOR38[B]</td>
-<td>LVCMOS18</td>
-<td>NA</td>
-<td>UP</td>
-<td>ON</td>
-<td>NONE</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>NA</td>
-<td>3.3</td>
-</tr>
-<tr>
-<td class="label">C10/3</td>
-<td>cmos_pwdn</td>
+<td>cam_pwdn</td>
 <td>out</td>
-<td>IOR39[A]</td>
+<td>IOR38[A]</td>
 <td>LVCMOS33</td>
 <td>8</td>
 <td>UP</td>
@@ -4506,6 +4474,38 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>OFF</td>
 <td>NA</td>
 <td>OFF</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">P9/3</td>
+<td>cam_rst_n</td>
+<td>out</td>
+<td>IOR38[B]</td>
+<td>LVCMOS33</td>
+<td>8</td>
+<td>UP</td>
+<td>NA</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>OFF</td>
+<td>NA</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td class="label">C10/3</td>
+<td>-</td>
+<td>in</td>
+<td>IOR39[A]</td>
+<td>LVCMOS18</td>
+<td>NA</td>
+<td>UP</td>
+<td>ON</td>
+<td>NONE</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
@@ -4543,33 +4543,33 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">P8/3</td>
-<td>-</td>
-<td>in</td>
+<td>cam_sda</td>
+<td>io</td>
 <td>IOR42[A]</td>
-<td>LVCMOS18</td>
-<td>NA</td>
+<td>LVCMOS33</td>
+<td>8</td>
 <td>UP</td>
-<td>ON</td>
+<td>NA</td>
 <td>NONE</td>
+<td>OFF</td>
 <td>NA</td>
-<td>NA</td>
-<td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
 <tr>
 <td class="label">T8/3</td>
-<td>-</td>
-<td>in</td>
+<td>cam_scl</td>
+<td>io</td>
 <td>IOR42[B]</td>
-<td>LVCMOS18</td>
-<td>NA</td>
+<td>LVCMOS33</td>
+<td>8</td>
 <td>UP</td>
-<td>ON</td>
+<td>NA</td>
 <td>NONE</td>
+<td>OFF</td>
 <td>NA</td>
-<td>NA</td>
-<td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
@@ -4687,33 +4687,33 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">P6/3</td>
-<td>-</td>
-<td>in</td>
+<td>cam_xclk</td>
+<td>out</td>
 <td>IOR53[A]</td>
-<td>LVCMOS18</td>
-<td>NA</td>
+<td>LVCMOS33</td>
+<td>8</td>
 <td>UP</td>
-<td>ON</td>
-<td>NONE</td>
 <td>NA</td>
 <td>NA</td>
+<td>OFF</td>
 <td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>
 <tr>
 <td class="label">T6/3</td>
-<td>-</td>
+<td>cam_pclk</td>
 <td>in</td>
 <td>IOR53[B]</td>
-<td>LVCMOS18</td>
+<td>LVCMOS33</td>
 <td>NA</td>
 <td>UP</td>
 <td>ON</td>
 <td>NONE</td>
 <td>NA</td>
 <td>NA</td>
-<td>NA</td>
+<td>OFF</td>
 <td>NA</td>
 <td>3.3</td>
 </tr>

@@ -1,38 +1,42 @@
+ 
+//`define COLOR_IN
+
 module top(
-	input                       clk,
-	input                       rst_n,
-	inout                       cmos_scl,          //cmos i2c clock
-	inout                       cmos_sda,          //cmos i2c data
-	input                       cmos_vsync,        //cmos vsync
-	input                       cmos_href,         //cmos hsync refrence,data valid
-	input                       cmos_pclk,         //cmos pxiel clock
-    output                      cmos_xclk,         //cmos externl clock 
-	input   [7:0]               cmos_db,           //cmos data
-	output                      cmos_rst_n,        //cmos reset 
-	output                      cmos_pwdn,         //cmos power down
-	
-	output [3:0] 				state_led,
-
-	output [14-1:0]             ddr_addr,       //ROW_WIDTH=14
-	output [3-1:0]              ddr_bank,       //BANK_WIDTH=3
-	output                      ddr_cs,
-	output                      ddr_ras,
-	output                      ddr_cas,
-	output                      ddr_we,
-	output                      ddr_ck,
-	output                      ddr_ck_n,
-	output                      ddr_cke,
-	output                      ddr_odt,
-	output                      ddr_reset_n,
-	output [2-1:0]              ddr_dm,         //DM_WIDTH=2
-	inout [16-1:0]              ddr_dq,         //DQ_WIDTH=16
-	inout [2-1:0]               ddr_dqs,        //DQS_WIDTH=2
-	inout [2-1:0]               ddr_dqs_n,      //DQS_WIDTH=2
-
-    output            O_tmds_clk_p    ,
-    output            O_tmds_clk_n    ,
-    output     [2:0]  O_tmds_data_p   ,//{r,g,b}
-    output     [2:0]  O_tmds_data_n   
+	input            clk          ,    // 27m
+	input            rst_n        ,
+// ov5640                         
+	inout            cam_scl      ,          //cmos i2c clock
+	inout            cam_sda      ,          //cmos i2c data
+	input            cam_vsync    ,        //cmos vsync
+	input            cam_href     ,         //cmos hsync refrence,data valid
+	input            cam_pclk     ,         //cmos pxiel clock
+    output           cam_xclk     ,         //cmos externl clock 
+	input   [7:0]    cam_data     ,           //cmos data
+	output           cam_rst_n    ,        //cmos reset 
+	output           cam_pwdn     ,         //cmos power down
+// HDMI TX           
+    output           O_tmds_clk_p ,
+    output           O_tmds_clk_n ,
+    output     [2:0] O_tmds_data_p,//{r,g,b}
+    output     [2:0] O_tmds_data_n,
+// LED	             
+	output     [3:0] state_led    ,
+// DDR3              
+	output [14-1:0]  O_ddr_addr   ,       //ROW_WIDTH=14
+	output [3-1:0]   O_ddr_ba     ,       //BANK_WIDTH=3
+	output           O_ddr_cs_n   ,
+	output           O_ddr_ras_n  ,
+	output           O_ddr_cas_n  ,
+	output           O_ddr_we_n   ,
+	output           O_ddr_clk    ,
+	output           O_ddr_clk_n  ,
+	output           O_ddr_cke    ,
+	output           O_ddr_odt    ,
+	output           O_ddr_reset_n,
+	output [2-1:0]   O_ddr_dqm    ,         //DM_WIDTH=2
+	inout [16-1:0]   IO_ddr_dq    ,         //DQ_WIDTH=16
+	inout [2-1:0]    IO_ddr_dqs   ,        //DQS_WIDTH=2
+	inout [2-1:0]    IO_ddr_dqs_n       //DQS_WIDTH=2  
 );
 
 //memory interface
@@ -55,45 +59,46 @@ wire[DATA_WIDTH-1:0]   rd_data            ;
 wire                   init_calib_complete;
 
 //According to IP parameters to choose
-`define	    WR_VIDEO_WIDTH_16
-`define	DEF_WR_VIDEO_WIDTH 16
-
-`define	    RD_VIDEO_WIDTH_16
-`define	DEF_RD_VIDEO_WIDTH 16
-
 `define	USE_THREE_FRAME_BUFFER
-
-`define	DEF_ADDR_WIDTH 28 
-`define	DEF_SRAM_DATA_WIDTH 128
 //
 //=========================================================
 //SRAM parameters
-parameter ADDR_WIDTH          = `DEF_ADDR_WIDTH;    //存储单元是byte，总容量=2^27*16bit = 2Gbit,增加1位rank地址，{rank[0],bank[2:0],row[13:0],cloumn[9:0]}
-parameter DATA_WIDTH          = `DEF_SRAM_DATA_WIDTH;   //与生成DDR3IP有关，此ddr3 2Gbit, x16， 时钟比例1:4 ，则固定128bit
-parameter WR_VIDEO_WIDTH      = `DEF_WR_VIDEO_WIDTH;  
-parameter RD_VIDEO_WIDTH      = `DEF_RD_VIDEO_WIDTH;  
+parameter ADDR_WIDTH          = 28;    //存储单元是byte，总容量=2^27*16bit = 2Gbit,增加1位rank地址，{rank[0],bank[2:0],row[13:0],cloumn[9:0]}
+parameter DATA_WIDTH          = 128;   //与生成DDR3IP有关，此ddr3 2Gbit, x16， 时钟比例1:4 ，则固定128bit
+parameter WR_VIDEO_WIDTH      = 32;    //写视频数据位宽  
+parameter RD_VIDEO_WIDTH      = 32;    //读视频数据位宽 
 
-wire                            video_clk;         //video pixel clock
-//-------------------
-//syn_code
-wire                      syn_off0_re;  // ofifo read enable signal
-wire                      syn_off0_vs;
-wire                      syn_off0_hs;
-                          
-wire                      off0_syn_de  ;
-wire [RD_VIDEO_WIDTH-1:0] off0_syn_data;
+////////// 图像缩放控制参数,很重要,只需要改这里就可以控制输出分辨率了
+parameter INPUT_VIDEO_WIDTH   = 640;   // 输入视频宽度
+parameter INPUT_VIDEO_HIGTH   = 480;   // 输入视频高度
+parameter OUTPUT_VIDEO_WIDTH  = 640;   // 输出视频宽度
+parameter OUTPUT_VIDEO_HIGTH  = 480;   // 输出视频高度
 
-wire[15:0]                      cmos_16bit_data;
-wire                            cmos_16bit_clk;
-wire[15:0] 						write_data;
+wire video_clk;         //video pixel clock
+wire serial_clk;
+wire TMDS_DDR_pll_lock;
+wire hdmi4_rst_n;
+assign hdmi4_rst_n = rst_n & TMDS_DDR_pll_lock;
 
-wire[9:0]                       lut_index;
-wire[31:0]                      lut_data;
+//wire[15:0] 						write_data;
+wire        cam_init_done;
+wire        ov5640_vs  ;   
+wire        ov5640_de  ;  
+wire [23:0] ov5640_data;	
 
-assign cmos_xclk = cmos_clk;
-assign cmos_pwdn = 1'b0;
-assign cmos_rst_n = 1'b1;
-assign write_data = {cmos_16bit_data[4:0],cmos_16bit_data[10:5],cmos_16bit_data[15:11]};
+wire [23:0] color_video_rgb;
+wire        color_video_de ;
+wire        color_video_vs ;
+
+wire        vtc_hs_out ;
+wire        vtc_vs_out ;
+wire        vtc_de_out ;
+wire [23:0] vtc_rgb_out;
+wire        vtc_req_out;
+
+assign cam_xclk = cmos_clk;
+assign cam_pwdn = 1'b0;
+assign cam_rst_n = 1'b1;
 assign hdmi_hpd = 1;
 
 //状态指示灯
@@ -103,104 +108,180 @@ assign state_led[1] = rst_n; //复位指示灯
 assign state_led[0] = init_calib_complete; //DDR3初始化指示灯
 
 reg [4:0] lcd_vs_cnt;
-always@(posedge lcd_vs) lcd_vs_cnt <= lcd_vs_cnt + 1;
+always@(posedge vtc_vs_out) lcd_vs_cnt <= lcd_vs_cnt + 1;
 
-//generate the CMOS sensor clock and the SDRAM controller clock
-cmos_pll cmos_pll_m0(
-	.clkin                     (clk                      		),
-	.clkout                    (cmos_clk 	              		)
-	);
+wire                      out_Video_can_read; 
+wire [WR_VIDEO_WIDTH-1:0] out_Video_Frame_data;
 
-mem_pll mem_pll_m0(
-	.clkin                     (clk                        ),
-	.clkout                    (memory_clk 	              		),
-	.lock 					   (DDR_pll_lock 						)
-	);
+wire        video_scale_data_vs  ; 
+wire        video_scale_data_de  ;
+wire [23:0] video_scale_data_out ;
+wire [23:0] scaler_fifo_rdout_out;
+wire empty            ;
+wire o_vid_fifo_read  ;
 
-//I2C master controller
-i2c_config i2c_config_m0(
-	.rst                        (~rst_n                   ),
-	.clk                        (clk                      ),
-	.clk_div_cnt                (16'd270                  ),
-	.i2c_addr_2byte             (1'b1                     ),
-	.lut_index                  (lut_index                ),
-	.lut_dev_addr               (lut_data[31:24]          ),
-	.lut_reg_addr               (lut_data[23:8]           ),
-	.lut_reg_data               (lut_data[7:0]            ),
-	.error                      (                         ),
-	.done                       (                         ),
-	.i2c_scl                    (cmos_scl                 ),
-	.i2c_sda                    (cmos_sda                 )
-);
-//configure look-up table
-lut_ov5640_rgb565_1024_768 lut_ov5640_rgb565_1024_768_m0(
-	.lut_index                  (lut_index                ),
-	.lut_data                   (lut_data                 )
-);
-//CMOS sensor 8bit data is converted to 16bit data
-cmos_8_16bit cmos_8_16bit_m0(
-	.rst                        (~rst_n                   ),
-	.pclk                       (cmos_pclk                ),
-	.pdata_i                    (cmos_db                  ),
-	.de_i                       (cmos_href                ),
-	.pdata_o                    (cmos_16bit_data          ),
-	.hblank                     (cmos_16bit_wr            ),
-	.de_o                       (cmos_16bit_clk           )
-);
+`ifdef COLOR_IN
+wire        scaler_fifo_rst_in  = color_video_vs ;
+wire        scaler_fifo_wclk_in = video_clk      ;
+wire        scaler_fifo_wden_in = color_video_de ;
+wire [23:0] scaler_fifo_wdin_in = color_video_rgb;
+wire        video_scale_vs_in   = color_video_vs ;
+`else
+wire        scaler_fifo_rst_in  = !cam_init_done || ov5640_vs;
+wire        scaler_fifo_wclk_in = cam_pclk                   ;
+wire        scaler_fifo_wden_in = ov5640_de                  ;
+wire [23:0] scaler_fifo_wdin_in = ov5640_data                ;
+wire        video_scale_vs_in   = ov5640_vs                  ;
+`endif
 
-//The video output timing generator and generate a frame read data request
-//输出
-wire out_de;
-wire [9:0] lcd_x,lcd_y;
-vga_timing vga_timing_m0(
-    .clk (video_clk),
-    .rst (~rst_n),
+wire scaler_reset        = !cam_init_done || !rst_n;
+wire scaler_fifo_rclk_in = video_clk       ;
+wire scaler_fifo_rden_in = o_vid_fifo_read;
 
-    // .active_x(lcd_x),
-    // .active_y(lcd_y),
+wire                      in_Video_Frame_clk  = scaler_fifo_rclk_in;
+wire                      in_Video_Frame_vs   = !video_scale_data_vs;
+wire                      in_Video_Frame_de   = video_scale_data_de;
+wire [WR_VIDEO_WIDTH-1:0] in_Video_Frame_data = {8'h00,video_scale_data_out};
 
-    .hs(syn_off0_hs),
-    .vs(syn_off0_vs),
-    .de(out_de)
+wire out_Video_Frame_clk = video_clk  ; 
+wire out_Video_Frame_vs  = !vtc_vs_out; 
+wire out_Video_Frame_de  = vtc_req_out; 
+wire [23:0] vtc_rgb_in   = out_Video_Frame_data[23:0];
 
-    );
-
-//输入测试图
-//--------------------------
-wire        tp0_vs_in  ;
-wire        tp0_hs_in  ;
-wire        tp0_de_in ;
-wire [ 7:0] tp0_data_r;
-wire [ 7:0] tp0_data_g;
-wire [ 7:0] tp0_data_b;
-testpattern testpattern_inst
-(
-    .I_pxl_clk   (video_clk              ),//pixel clock
-    .I_rst_n     (rst_n             ),//low active 
-    .I_mode      (3'b010 ),//data select
-    .I_single_r  (8'd255               ),
-    .I_single_g  (8'd255             ),
-    .I_single_b  (8'd255               ),                  //800x600    //1024x768   //1280x720   //1920x1080 
-    .I_h_total   (12'd1650     ),//hor total time  // 12'd1056  // 12'd1344  // 12'd1650  // 12'd2200
-    .I_h_sync    (12'd40       ),//hor sync time   // 12'd128   // 12'd136   // 12'd40    // 12'd44  
-    .I_h_bporch  (12'd220      ),//hor back porch  // 12'd88    // 12'd160   // 12'd220   // 12'd148 
-    .I_h_res     (12'd1280     ),//hor resolution  // 12'd800   // 12'd1024  // 12'd1280  // 12'd1920
-    .I_v_total   (12'd750      ),//ver total time  // 12'd628   // 12'd806   // 12'd750   // 12'd1125 
-    .I_v_sync    (12'd5        ),//ver sync time   // 12'd4     // 12'd6     // 12'd5     // 12'd5   
-    .I_v_bporch  (12'd20       ),//ver back porch  // 12'd23    // 12'd29    // 12'd20    // 12'd36  
-    .I_v_res     (12'd720      ),//ver resolution  // 12'd600   // 12'd768   // 12'd720   // 12'd1080 
-    .I_hs_pol    (1'b1               ),//0,负极性;1,正极性
-    .I_vs_pol    (1'b1               ),//0,负极性;1,正极性
-    .O_de        (tp0_de_in          ),   
-    .O_hs        (tp0_hs_in          ),
-    .O_vs        (tp0_vs_in          ),
-    .O_data_r    (tp0_data_r         ),   
-    .O_data_g    (tp0_data_g         ),
-    .O_data_b    (tp0_data_b         )
+/////////////////////// 时钟 PLL
+// 生成 1280*720@60Hz 视频所需的 371.25 M 串行时钟
+TMDS_rPLL u_tmds_rpll(
+	.clkin     (clk       ),     //input clk 
+	.clkout    (serial_clk),     // 371.25 M
+	.lock      (TMDS_DDR_pll_lock)     //output lock
 );
 
-Video_Frame_Buffer_Top Video_Frame_Buffer_Top_inst
-( 
+defparam u_clkdiv.DIV_MODE="5"; // 5分频
+defparam u_clkdiv.GSREN="false";
+// 生成 1280*720@60Hz 视频所需的 74.25 M 像素时钟
+CLKDIV u_clkdiv(
+	.RESETN(hdmi4_rst_n),
+	.HCLKIN(serial_clk ),   // 371.25 M
+	.CLKOUT(video_clk  ),    // 371.25/5=74.25 M
+	.CALIB (1'b1       )
+);
+
+// 生成 ov5640摄像头所需的 24 M 驱动时钟,如果你的摄像头自带了晶振,则不需要此时钟
+cmos_pll u_cmos_pll(
+	.clkin (clk     ),	// 27 M
+	.clkout(cmos_clk)	// 24 M
+);
+
+// 生成 DDR3 所需的 400 M 驱动时钟
+mem_pll u_mem_pll(
+	.clkin (clk         ),	// 27 M
+	.clkout(memory_clk 	),	// 400 M
+	.lock  (DDR_pll_lock)
+);
+
+// 动态彩条模块	
+video_block_move #(
+    .H_DISP            (640      ),   //video h
+    .V_DISP            (480       ),   //video v
+    .VIDEO_CLK         (74250000  ),   //video clk
+    .BLOCK_CLK         (100       ),   //move block clk
+    .SIDE_W            (20        ),   //screen side size
+    .BLOCK_W           (40        ),   //move block size
+    .SCREEN_SIDE_COLOR (24'h7b7b7b),   //screen side color
+    .SCREEN_BKG_COLOR  (24'hffffff),   //screen background color
+    .MOVE_BLOCK_COLOR  (24'hffc0cb)    //move block color
+)video_block(
+    .pixel_clk(video_clk      ),
+	.sys_rst_n(rst_n    ),
+	.video_hs (),
+	.video_vs (color_video_vs ),
+	.video_de (color_video_de ),
+	.video_rgb(color_video_rgb)
+);
+
+// ov5640 i2c 配置模块
+ov5640_i2c #(
+	.SENSOR_ADDR(8'h78),
+	.DISPAY_H   (640 ),
+	.DISPAY_V   (480 )
+)u_ov5640_i2c(
+	.clk        (clk          ),
+	.reset_h    (!rst_n       ),
+	.clk_div_cnt(16'd500      ),	//clk_div_cnt=clk/(5*i2c_scl)-1	
+    .sensor_scl (cam_scl      ),  
+    .sensor_sda (cam_sda      ),  
+	.i2c_cgf_ok (cam_init_done)
+);
+
+// ov5640 数据采集模块
+ov5640_rx #(
+	.RGB_TYPE(1)	//0-->RGB565  1-->RGB888
+)u_ov5640_rx(
+    .rstn_i      (rst_n || cam_init_done),
+	.cmos_clk_i  (),//cmos senseor clock.
+	.cmos_pclk_i (cam_pclk   ),//input pixel clock.
+	.cmos_href_i (cam_href   ),//input pixel hs signal.
+	.cmos_vsync_i(cam_vsync  ),//input pixel vs signal.
+	.cmos_data_i (cam_data   ),//data.
+	.cmos_xclk_o (           ),//output clock to cmos sensor.如果你的摄像头自带晶振，则此信号不需要
+    .rgb_o       (ov5640_data),
+    .de_o        (ov5640_de  ),
+    .vs_o        (ov5640_vs  ),
+    .hs_o        ()
+);
+
+// 数据缓冲 FIFO
+resize_fifo u_resize_fifo(
+    .Data(scaler_fifo_wdin_in), //input [23:0] Data
+    .WrReset(scaler_fifo_rst_in), //input Reset
+    .RdReset(scaler_fifo_rst_in), //input Reset
+    .WrClk(scaler_fifo_wclk_in), //input WrClk
+    .RdClk(scaler_fifo_rclk_in), //input RdClk
+    .WrEn(scaler_fifo_wden_in), //input WrEn
+    .RdEn(scaler_fifo_rden_in), //input RdEn
+    .Q(scaler_fifo_rdout_out), //output [23:0] Q
+    .Empty(empty), //output Empty
+    .Full() //output Full
+);
+
+// 图像缩放模块
+helai_video_scale #(
+	.DATA_WIDTH         (8 ),		//Width of input/output data
+	.CHANNELS           (3 ),		//Number of channels of DATA_WIDTH, for color images
+	.DISCARD_CNT_WIDTH  (8 ),		//Width of inputDiscardCnt
+	.INPUT_X_RES_WIDTH  (11),		//Widths of input/output resolution control signals
+	.INPUT_Y_RES_WIDTH  (11),
+	.OUTPUT_X_RES_WIDTH (11),
+	.OUTPUT_Y_RES_WIDTH (11),
+	.FRACTION_BITS      (8 ),		//Number of bits for fractional component of coefficients.
+	.SCALE_INT_BITS     (8 ),		//Width of integer component of scaling factor. The maximum input data width to
+	.SCALE_FRAC_BITS    (14),		//Width of fractional component of scaling factor
+	.BUFFER_SIZE        (4 )		//Depth of RFIFO	
+)u_helai_video_scale(
+	.clk             (scaler_fifo_rclk_in  ),
+	.rst             (scaler_reset         ),
+	.i_vid_data      (scaler_fifo_rdout_out), 
+	.i_vid_de        (~empty               ),
+	.o_vid_fifo_read (o_vid_fifo_read      ),
+	.i_vid_vs        (video_scale_vs_in    ),
+	.o_vout_data     (video_scale_data_out ),
+	.o_vout_de       (video_scale_data_de  ),			//latency of 4 clock cycles after nextDout is asserted
+	.o_vout_vs       (video_scale_data_vs  ),
+	.i_vout_read     (1),
+	.i_discard_cnt   (0),	//Number of input pixels to discard before processing data. Used for clipping
+	.i_src_image_x   (INPUT_VIDEO_WIDTH-1 ),			//Resolution of input data minus 1
+	.i_src_image_y   (INPUT_VIDEO_HIGTH-1 ),
+	.i_des_image_x   (OUTPUT_VIDEO_WIDTH-1),			//Resolution of output data minus 1
+	.i_des_image_y   (OUTPUT_VIDEO_HIGTH-1),
+	.i_scaler_x_ratio(32'h4000 * (INPUT_VIDEO_WIDTH-1) / (OUTPUT_VIDEO_WIDTH-1)-1),				//Scaling factors. Input resolution scaled up by 1/xScale. Format Q SCALE_INT_BITS.SCALE_FRAC_BITS
+	.i_scaler_y_ratio(32'h4000 * (INPUT_VIDEO_HIGTH-1) / (OUTPUT_VIDEO_HIGTH-1)-1),				//Scaling factors. Input resolution scaled up by 1/yScale. Format Q SCALE_INT_BITS.SCALE_FRAC_BITS
+	.i_left_offset   (0),			//Integer/fraction of input pixel to offset output data horizontally right. Format Q OUTPUT_X_RES_WIDTH.SCALE_FRAC_BITS
+	.i_top_offset    (0),		//Fraction of input pixel to offset data vertically down. Format Q0.SCALE_FRAC_BITS
+	.i_scaler_type   (0)		//Use nearest neighbor resize instead of bilinear
+);
+
+// 视频缓存模块,直接调用的 ideo_Frame_Buffer IP核
+Video_Frame_Buffer_Top u_Video_Frame_Buffer( 
     .I_rst_n              (init_calib_complete ),//rst_n            ),
     .I_dma_clk            (dma_clk          ),   //sram_clk         ),
 `ifdef USE_THREE_FRAME_BUFFER 
@@ -208,26 +289,18 @@ Video_Frame_Buffer_Top Video_Frame_Buffer_Top_inst
     .I_rd_halt            (1'd0             ), //1:halt,  0:no halt
 `endif
     // video data input             
-//    .I_vin0_clk           (cmos_16bit_clk   ),
-//    .I_vin0_vs_n          (~cmos_vsync      ),//只接收负极性
-//    .I_vin0_de            (cmos_16bit_wr    ),
-//    .I_vin0_data          (write_data       ),
-//    .O_vin0_fifo_full     (                 ),
-
-     //测试图
-     .I_vin0_clk           (video_clk   ),
-     .I_vin0_vs_n          (~tp0_vs_in      ),//只接收负极性
-     .I_vin0_de            (tp0_de_in    ),
-     .I_vin0_data          ({tp0_data_r[7:3],tp0_data_g[7:2],tp0_data_b[7:3]} ),
-     .O_vin0_fifo_full     (                 ),
-
-//     video data output            
-    .I_vout0_clk          (video_clk        ),
-    .I_vout0_vs_n         (syn_off0_vs     ),//只接收负极性
-    .I_vout0_de           (out_de           ),
-    .O_vout0_den          (off0_syn_de      ),
-    .O_vout0_data         (off0_syn_data    ),
-    .O_vout0_fifo_empty   (                 ),
+    .I_vin0_clk           (in_Video_Frame_clk ),
+    .I_vin0_vs_n          (in_Video_Frame_vs  ),//只接收负极性
+    .I_vin0_de            (in_Video_Frame_de  ),
+    .I_vin0_data          (in_Video_Frame_data),
+    .O_vin0_fifo_full     (),
+    // video data output            
+    .I_vout0_clk          (out_Video_Frame_clk ),
+    .I_vout0_vs_n         (out_Video_Frame_vs  ),//只接收负极性
+    .I_vout0_de           (out_Video_Frame_de  ),
+    .O_vout0_den          (out_Video_can_read  ),
+    .O_vout0_data         (out_Video_Frame_data),
+    .O_vout0_fifo_empty   (),
     // ddr write request
     .I_cmd_ready          (cmd_ready          ),
     .O_cmd                (cmd                ),//0:write;  1:read
@@ -245,42 +318,8 @@ Video_Frame_Buffer_Top Video_Frame_Buffer_Top_inst
     .I_init_calib_complete(init_calib_complete)
 ); 
 
-
-localparam N = 7; //delay N clocks
-                          
-reg  [N-1:0]  Pout_hs_dn   ;
-reg  [N-1:0]  Pout_vs_dn   ;
-reg  [N-1:0]  Pout_de_dn   ;
-
-always@(posedge video_clk or negedge rst_n)
-begin
-    if(!rst_n)
-        begin                          
-            Pout_hs_dn  <= {N{1'b1}};
-            Pout_vs_dn  <= {N{1'b1}}; 
-            Pout_de_dn  <= {N{1'b0}}; 
-        end
-    else 
-        begin                          
-            Pout_hs_dn  <= {Pout_hs_dn[N-2:0],syn_off0_hs};
-            Pout_vs_dn  <= {Pout_vs_dn[N-2:0],syn_off0_vs}; 
-            Pout_de_dn  <= {Pout_de_dn[N-2:0],out_de}; 
-        end
-end
-
-//---------------------------------------------
-wire [4:0] lcd_r,lcd_b;
-wire [5:0] lcd_g;
-wire lcd_vs,lcd_de,lcd_hs,lcd_dclk;
-  
-assign {lcd_r,lcd_g,lcd_b}    = off0_syn_de ? off0_syn_data[15:0] : 16'h0000;//{r,g,b}
-assign lcd_vs      			  = Pout_vs_dn[4];//syn_off0_vs;
-assign lcd_hs      			  = Pout_hs_dn[4];//syn_off0_hs;
-assign lcd_de      			  = Pout_de_dn[4];//off0_syn_de;
-assign lcd_dclk    			  = video_clk;//video_clk_phs;
-
-DDR3MI DDR3_Memory_Interface_Top_inst 
-(
+// DDR3控制器模块,直接调用的 DDR3_Memory_Interface IP核
+DDR3MI u_DDR3MI(
     .clk                (video_clk          ),
     .memory_clk         (memory_clk         ),
     .pll_lock           (DDR_pll_lock           ),
@@ -306,72 +345,56 @@ DDR3MI DDR3_Memory_Interface_Top_inst
     .clk_out            (dma_clk            ),
     .burst              (1'b1               ),
     // mem interface
-    .ddr_rst            (                 ),
-    .O_ddr_addr         (ddr_addr         ),
-    .O_ddr_ba           (ddr_bank         ),
-    .O_ddr_cs_n         (ddr_cs         ),
-    .O_ddr_ras_n        (ddr_ras        ),
-    .O_ddr_cas_n        (ddr_cas        ),
-    .O_ddr_we_n         (ddr_we         ),
-    .O_ddr_clk          (ddr_ck          ),
-    .O_ddr_clk_n        (ddr_ck_n        ),
-    .O_ddr_cke          (ddr_cke          ),
-    .O_ddr_odt          (ddr_odt          ),
-    .O_ddr_reset_n      (ddr_reset_n      ),
-    .O_ddr_dqm          (ddr_dm           ),
-    .IO_ddr_dq          (ddr_dq           ),
-    .IO_ddr_dqs         (ddr_dqs          ),
-    .IO_ddr_dqs_n       (ddr_dqs_n        )
-);
-//==============================================================================
-//TMDS TX(HDMI4)
-wire serial_clk;
-wire TMDS_DDR_pll_lock;
-wire hdmi4_rst_n;
-
-TMDS_rPLL u_tmds_rpll
-(.clkin     (clk       )     //input clk 
-,.clkout    (serial_clk     )     //output clk 
-,.lock      (TMDS_DDR_pll_lock       )     //output lock
+    .ddr_rst            (                   ),
+    .O_ddr_addr         (O_ddr_addr         ),
+    .O_ddr_ba           (O_ddr_ba           ),
+    .O_ddr_cs_n         (O_ddr_cs_n         ),
+    .O_ddr_ras_n        (O_ddr_ras_n        ),
+    .O_ddr_cas_n        (O_ddr_cas_n        ),
+    .O_ddr_we_n         (O_ddr_we_n         ),
+    .O_ddr_clk          (O_ddr_clk          ),
+    .O_ddr_clk_n        (O_ddr_clk_n        ),
+    .O_ddr_cke          (O_ddr_cke          ),
+    .O_ddr_odt          (O_ddr_odt          ),
+    .O_ddr_reset_n      (O_ddr_reset_n      ),
+    .O_ddr_dqm          (O_ddr_dqm          ),
+    .IO_ddr_dq          (IO_ddr_dq          ),
+    .IO_ddr_dqs         (IO_ddr_dqs         ),
+    .IO_ddr_dqs_n       (IO_ddr_dqs_n       )
 );
 
-assign hdmi4_rst_n = rst_n & TMDS_DDR_pll_lock;
-
-CLKDIV u_clkdiv
-(.RESETN(hdmi4_rst_n)
-,.HCLKIN(serial_clk) //clk  x5
-,.CLKOUT(video_clk)    //clk  x1
-,.CALIB (1'b1)
+// 输出视频时序模块, VGA时序,分辨率在模块内部自定义
+video_timing_control video_timing(
+	.i_clk     (video_clk  ),	
+	.i_rst_n   (rst_n      ), 
+	.i_start_x (0          ),
+	.i_start_y (0          ),
+	.i_disp_h  (OUTPUT_VIDEO_WIDTH),
+	.i_disp_v  (OUTPUT_VIDEO_HIGTH),
+	.i_rgb     (vtc_rgb_in ),
+    .i_Video_can_read(out_Video_can_read),
+	.o_hs      (vtc_hs_out ),
+	.o_vs      (vtc_vs_out ),
+	.o_de      (vtc_de_out ),
+	.o_rgb     (vtc_rgb_out),
+	.o_data_req(vtc_req_out)
 );
-defparam u_clkdiv.DIV_MODE="5";
-defparam u_clkdiv.GSREN="false";
 
-DVI_TX_Top DVI_TX_Top_inst
-(
-    .I_rst_n       (hdmi4_rst_n   ),  //asynchronous reset, low active
-    .I_serial_clk  (serial_clk    ),
-
-//    .I_rgb_clk     (lcd_dclk       ),  //pixel clock
-//    .I_rgb_vs      (lcd_vs        ), 
-//    .I_rgb_hs      (lcd_hs        ),    
-//    .I_rgb_de      (lcd_de        ), 
-//    .I_rgb_r       ( {lcd_r,3'd0} ),  //tp0_data_r
-//    .I_rgb_g       ( {lcd_g,2'd0} ),  
-//    .I_rgb_b       ( {lcd_b,3'd0} ),  
-
-    //测试图
-     .I_rgb_clk     (video_clk       ),  //pixel clock
-     .I_rgb_vs      (tp0_vs_in  ), 
-     .I_rgb_hs      (tp0_hs_in  ),   
-     .I_rgb_de      (tp0_de_in  ), 
-     .I_rgb_r       (tp0_data_r  ), 
-     .I_rgb_g       (tp0_data_g  ), 
-     .I_rgb_b       (tp0_data_b  ), 
-
-    .O_tmds_clk_p  (O_tmds_clk_p  ),
-    .O_tmds_clk_n  (O_tmds_clk_n  ),
-    .O_tmds_data_p (O_tmds_data_p ),  //{r,g,b}
-    .O_tmds_data_n (O_tmds_data_n )
+// HDMI输出模块,直接调用的 DVI_TX IP核
+DVI_TX_Top u_HDMI_TX(
+    .I_rst_n       (hdmi4_rst_n       ),  //asynchronous reset, low active
+    .I_serial_clk  (serial_clk        ),
+    .I_rgb_clk     (video_clk         ),  //pixel clock
+    .I_rgb_vs      (vtc_vs_out        ), 
+    .I_rgb_hs      (vtc_hs_out        ),    
+    .I_rgb_de      (vtc_de_out        ), 
+    .I_rgb_r       (vtc_rgb_out[ 7: 0]),  //tp0_data_r
+    .I_rgb_g       (vtc_rgb_out[15: 8]),  
+    .I_rgb_b       (vtc_rgb_out[23:16]),  
+    .O_tmds_clk_p  (O_tmds_clk_p      ),
+    .O_tmds_clk_n  (O_tmds_clk_n      ),
+    .O_tmds_data_p (O_tmds_data_p     ),  //{r,g,b}
+    .O_tmds_data_n (O_tmds_data_n     )
 );
 
 endmodule

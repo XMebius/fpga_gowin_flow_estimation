@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" Register="1477" Alu="212" Lut="2019" Bsram="12" Ssram="117">
- <SubModule name="cmos_pll_m0"/>
- <SubModule name="mem_pll_m0"/>
- <SubModule name="i2c_config_m0" Register="13" Lut="32">
-  <SubModule name="i2c_master_top_m0" Register="17" Lut="704">
-   <SubModule name="byte_controller" Register="23" Lut="49">
-    <SubModule name="bit_controller" Register="71" Alu="15" Lut="94"/>
+<Module name="top" Register="1374" Alu="174" Lut="1587" Bsram="8" Ssram="111">
+ <SubModule name="u_tmds_rpll"/>
+ <SubModule name="u_cmos_pll"/>
+ <SubModule name="u_mem_pll"/>
+ <SubModule name="u_ov5640_i2c">
+  <SubModule name="i2c_config_ov5640" Register="13" Lut="25">
+   <SubModule name="i2c_master_top_m0" Register="17" Lut="766">
+    <SubModule name="byte_controller" Register="23" Lut="48">
+     <SubModule name="bit_controller" Register="71" Alu="15" Lut="96"/>
+    </SubModule>
    </SubModule>
   </SubModule>
  </SubModule>
- <SubModule name="vga_timing_m0" Register="27" Lut="49"/>
- <SubModule name="testpattern_inst" Register="70" Lut="73"/>
- <SubModule name="u_tmds_rpll"/>
+ <SubModule name="u_ov5640_rx" Register="33" Alu="7" Lut="11" Ssram="2"/>
+ <SubModule name="u_resize_fifo" Register="58" Alu="13" Lut="105" Bsram="6" Ssram="8"/>
+ <SubModule name="u_helai_video_scale" Register="136" Alu="54" Lut="194" Dsp="13">
+  <SubModule name="ramRB" Register="11" Alu="10" Lut="402">
+   <SubModule name="ram_generate[0].ram_inst_i" Bsram="3"/>
+   <SubModule name="ram_generate[1].ram_inst_i" Bsram="3"/>
+   <SubModule name="ram_generate[2].ram_inst_i" Bsram="3"/>
+   <SubModule name="ram_generate[3].ram_inst_i" Bsram="3"/>
+  </SubModule>
+ </SubModule>
+ <SubModule name="u_Video_Frame_Buffer" Register="362" Alu="42" Lut="694" Bsram="16"/>
+ <SubModule name="video_timing" Register="54" Alu="32" Lut="83"/>
 </Module>

@@ -1,145 +1,245 @@
 [
  {
-  "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/gowin_rpll/sys_pll.v",
+  "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/sys_pll.v",
   "InstLine" : 9,
   "InstName" : "sys_pll",
-  "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/gowin_rpll/sys_pll.v",
+  "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/sys_pll.v",
   "ModuleLine" : 9,
   "ModuleName" : "sys_pll"
  },
  {
-  "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/syn_gen.v",
-  "InstLine" : 13,
-  "InstName" : "syn_gen",
-  "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/syn_gen.v",
-  "ModuleLine" : 13,
-  "ModuleName" : "syn_gen"
- },
- {
-  "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-  "InstLine" : 1,
+  "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+  "InstLine" : 4,
   "InstName" : "top",
-  "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-  "ModuleLine" : 1,
+  "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+  "ModuleLine" : 4,
   "ModuleName" : "top",
   "SubInsts" : [
    {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 202,
-    "InstName" : "Video_Frame_Buffer_Top_inst",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/video_frame_buffer/Video_Frame_Buffer_Top.v",
-    "ModuleLine" : 1,
-    "ModuleName" : "Video_Frame_Buffer_Top"
-   },
-   {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 282,
-    "InstName" : "DDR3_Memory_Interface_Top_inst",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/ddr3_memory_interface/DDR3MI.v",
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 322,
+    "InstName" : "u_DDR3MI",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ddr3_memory_interface/DDR3MI.v",
     "ModuleLine" : 1,
     "ModuleName" : "DDR3MI"
    },
    {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 349,
-    "InstName" : "DVI_TX_Top_inst",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/dvi_tx/DVI_TX_Top.v",
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 384,
+    "InstName" : "u_HDMI_TX",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/dvi_tx/DVI_TX_Top.v",
     "ModuleLine" : 1,
     "ModuleName" : "DVI_TX_Top"
    },
    {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 109,
-    "InstName" : "cmos_pll_m0",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/gowin_rpll/cmos_pll.v",
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 153,
+    "InstName" : "u_tmds_rpll",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/TMDS_rPLL.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "TMDS_rPLL"
+   },
+   {
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 170,
+    "InstName" : "u_cmos_pll",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/cmos_pll.v",
     "ModuleLine" : 9,
     "ModuleName" : "cmos_pll"
    },
    {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 114,
-    "InstName" : "mem_pll_m0",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/gowin_rpll/mem_pll.v",
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 176,
+    "InstName" : "u_mem_pll",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/mem_pll.v",
     "ModuleLine" : 9,
     "ModuleName" : "mem_pll"
    },
    {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 121,
-    "InstName" : "i2c_config_m0",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_config.v",
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 193,
+    "InstName" : "video_block",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/video_block_move.v",
     "ModuleLine" : 1,
-    "ModuleName" : "i2c_config",
+    "ModuleName" : "video_block_move",
     "SubInsts" : [
      {
-      "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_config.v",
-      "InstLine" : 101,
-      "InstName" : "i2c_master_top_m0",
-      "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_master_top.v",
+      "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/video_block_move.v",
+      "InstLine" : 34,
+      "InstName" : "u_video_timing_color",
+      "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/video_timing_color.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "video_timing_color"
+     },
+     {
+      "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/video_block_move.v",
+      "InstLine" : 61,
+      "InstName" : "u_rgb_display",
+      "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/rgb_display.v",
       "ModuleLine" : 1,
-      "ModuleName" : "i2c_master_top",
+      "ModuleName" : "rgb_display"
+     }
+    ]
+   },
+   {
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 207,
+    "InstName" : "u_ov5640_i2c",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/ov5640_i2c.v",
+    "ModuleLine" : 23,
+    "ModuleName" : "ov5640_i2c",
+    "SubInsts" : [
+     {
+      "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/ov5640_i2c.v",
+      "InstLine" : 39,
+      "InstName" : "i2c_config_ov5640",
+      "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_config.v",
+      "ModuleLine" : 2,
+      "ModuleName" : "i2c_config",
       "SubInsts" : [
        {
-        "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_master_top.v",
-        "InstLine" : 232,
-        "InstName" : "byte_controller",
-        "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_master_byte_ctrl.v",
-        "ModuleLine" : 75,
-        "ModuleName" : "i2c_master_byte_ctrl",
+        "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_config.v",
+        "InstLine" : 102,
+        "InstName" : "i2c_master_top_m0",
+        "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_top.v",
+        "ModuleLine" : 2,
+        "ModuleName" : "i2c_master_top",
         "SubInsts" : [
          {
-          "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_master_byte_ctrl.v",
-          "InstLine" : 146,
-          "InstName" : "bit_controller",
-          "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_master_bit_ctrl.v",
-          "ModuleLine" : 143,
-          "ModuleName" : "i2c_master_bit_ctrl"
+          "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_top.v",
+          "InstLine" : 233,
+          "InstName" : "byte_controller",
+          "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_byte_ctrl.v",
+          "ModuleLine" : 8,
+          "ModuleName" : "i2c_master_byte_ctrl",
+          "SubInsts" : [
+           {
+            "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_byte_ctrl.v",
+            "InstLine" : 79,
+            "InstName" : "bit_controller",
+            "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_bit_ctrl.v",
+            "ModuleLine" : 46,
+            "ModuleName" : "i2c_master_bit_ctrl"
+           }
+          ]
          }
         ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/ov5640_i2c.v",
+      "InstLine" : 59,
+      "InstName" : "u_ov5640_reg_cfg",
+      "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/ov5640_reg_cfg.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "ov5640_reg_cfg"
+     }
+    ]
+   },
+   {
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 219,
+    "InstName" : "u_ov5640_rx",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_rx.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "ov5640_rx"
+   },
+   {
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 234,
+    "InstName" : "u_resize_fifo",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/fifo_top/resize_fifo.v",
+    "ModuleLine" : 701,
+    "ModuleName" : "resize_fifo",
+    "SubInsts" : [
+     {
+      "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/fifo_top/resize_fifo.v",
+      "InstLine" : 726,
+      "InstName" : "fifo_inst",
+      "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/fifo_top/resize_fifo.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "~fifo.resize_fifo"
+     }
+    ]
+   },
+   {
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 260,
+    "InstName" : "u_helai_video_scale",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/helai_video_scale.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "helai_video_scale",
+    "SubInsts" : [
+     {
+      "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/helai_video_scale.v",
+      "InstLine" : 403,
+      "InstName" : "ramRB",
+      "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramFifo.v",
+      "ModuleLine" : 2,
+      "ModuleName" : "ramFifo",
+      "SubInsts" : [
+       {
+        "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramFifo.v",
+        "InstLine" : 62,
+        "InstName" : "ram_generate[0].ram_inst_i",
+        "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramDualPort.v",
+        "ModuleLine" : 2,
+        "ModuleName" : "ramDualPort"
+       },
+       {
+        "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramFifo.v",
+        "InstLine" : 62,
+        "InstName" : "ram_generate[1].ram_inst_i",
+        "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramDualPort.v",
+        "ModuleLine" : 2,
+        "ModuleName" : "ramDualPort"
+       },
+       {
+        "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramFifo.v",
+        "InstLine" : 62,
+        "InstName" : "ram_generate[2].ram_inst_i",
+        "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramDualPort.v",
+        "ModuleLine" : 2,
+        "ModuleName" : "ramDualPort"
+       },
+       {
+        "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramFifo.v",
+        "InstLine" : 62,
+        "InstName" : "ram_generate[3].ram_inst_i",
+        "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramDualPort.v",
+        "ModuleLine" : 2,
+        "ModuleName" : "ramDualPort"
        }
       ]
      }
     ]
    },
    {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 136,
-    "InstName" : "lut_ov5640_rgb565_1024_768_m0",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/lut_ov5640_rgb565_1024_768.v",
-    "ModuleLine" : 1,
-    "ModuleName" : "lut_ov5640_rgb565_1024_768"
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 284,
+    "InstName" : "u_Video_Frame_Buffer",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_frame_buffer/video_frame_buffer.v",
+    "ModuleLine" : 3785,
+    "ModuleName" : "Video_Frame_Buffer_Top",
+    "SubInsts" : [
+     {
+      "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_frame_buffer/video_frame_buffer.v",
+      "InstLine" : 3848,
+      "InstName" : "vfb_ddr3_wrapper_inst",
+      "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_frame_buffer/video_frame_buffer.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "~vfb_ddr3_wrapper.Video_Frame_Buffer_Top"
+     }
+    ]
    },
    {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 141,
-    "InstName" : "cmos_8_16bit_m0",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/cmos_8_16bit.v",
-    "ModuleLine" : 1,
-    "ModuleName" : "cmos_8_16bit"
-   },
-   {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 155,
-    "InstName" : "vga_timing_m0",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/vga_timing.v",
-    "ModuleLine" : 1,
-    "ModuleName" : "vga_timing"
-   },
-   {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 176,
-    "InstName" : "testpattern_inst",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/testpattern.v",
-    "ModuleLine" : 17,
-    "ModuleName" : "testpattern"
-   },
-   {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
-    "InstLine" : 332,
-    "InstName" : "u_tmds_rpll",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/gowin_rpll/TMDS_rPLL.v",
-    "ModuleLine" : 9,
-    "ModuleName" : "TMDS_rPLL"
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 367,
+    "InstName" : "video_timing",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_timing_control.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "video_timing_control"
    }
   ]
  }
