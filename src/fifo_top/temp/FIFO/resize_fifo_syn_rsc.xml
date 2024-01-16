@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="resize_fifo" Register="58" Alu="13" Lut="105" Bsram="6" Ssram="8"/>

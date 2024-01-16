@@ -2,83 +2,107 @@
  "Device" : "GW2A-18C",
  "Files" : [
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/cmos_8_16bit.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ddr3_memory_interface/DDR3MI.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/ddr3_memory_interface/DDR3MI.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/dvi_tx/DVI_TX_Top.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/dvi_tx/DVI_TX_Top.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/fifo_hs/video_fifo.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/fifo_hs/video_fifo.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/fifo_top/resize_fifo.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/gowin_rpll/TMDS_rPLL.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/TMDS_rPLL.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/gowin_rpll/cmos_pll.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/cmos_pll.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/gowin_rpll/mem_pll.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/mem_pll.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/gowin_rpll/sys_pll.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/sys_pll.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_config.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/rgb_display.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_master_bit_ctrl.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/video_block_move.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_master_byte_ctrl.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/video_timing_color.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_master_defines.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/helai_video_scale.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/i2c_master_top.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramDualPort.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/i2c_master/timescale.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramFifo.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/lut_ov5640_rgb565_1024_768.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_config.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/syn_gen.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_bit_ctrl.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/testpattern.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_byte_ctrl.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/top.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_defines.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/vga_timing.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_top.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/src/video_frame_buffer/Video_Frame_Buffer_Top.v",
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/ov5640_i2c.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/ov5640_reg_cfg.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/timescale.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_rx.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_frame_buffer/video_frame_buffer.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_timing_control.v",
    "Type" : "verilog"
   }
  ],
@@ -86,7 +110,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "Y:/Workspace/SmartChipSystem/e203/TangPrimer-20K-example/Cam2HDMI/OV5640_HDMI1024_DDR3/impl/temp/rtl_parser.result",
+ "ResultFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/impl/temp/rtl_parser.result",
  "Top" : "top",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"
