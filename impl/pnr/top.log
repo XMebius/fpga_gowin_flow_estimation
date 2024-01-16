@@ -1,0 +1,34 @@
+Reading netlist file: "Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\impl\gwsynthesis\top.vg"
+Parsing netlist file "Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\impl\gwsynthesis\top.vg" completed
+Processing netlist completed
+Reading constraint file: "Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\src\top.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+WARN  (TA1081) : Clock 'cmos_pclk' is ignored, because it has no invalid clock source node
+WARN  (TA1081) : Clock 'cmos_vsync' is ignored, because it has no invalid clock source node
+WARN  (TA1081) : Clock 'cmos_pclk' is ignored, because it has no invalid clock source node
+WARN  (TA1081) : Clock 'cmos_vsync' is ignored, because it has no invalid clock source node
+WARN  (TA1117) : Can't calculate clocks' relationship between: "u_clkdiv/CLKOUT.default_gen_clk" and "mem_clk"
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\impl\pnr\top.power.html" completed
+Generate file "Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\impl\pnr\top.pin.html" completed
+Generate file "Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\impl\pnr\top.rpt.html" completed
+Generate file "Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\impl\pnr\top.rpt.txt" completed
+Generate file "Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\impl\pnr\top.tr.html" completed
+Tue Jan 16 19:43:53 2024
+

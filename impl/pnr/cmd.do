@@ -1,0 +1,13 @@
+-d Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\impl\gwsynthesis\top.vg
+-p GW2A-18C-PBGA256-8
+-pn GW2A-LV18PG256C8/I7
+-cst Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\src\top.cst
+-cfg Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\impl\pnr\device.cfg
+-sdc Y:\Workspace\SmartChipSystem\e203\TangPrimer-20K-example\Cam2HDMI\OV5640_HDMI1024_DDR3\src\lcd.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-correct_hold 1
+-route_maxfan 23
