@@ -31,6 +31,7 @@
         <File path="src/top.v" type="file.verilog" enable="1"/>
         <File path="src/video_frame_buffer/video_frame_buffer.v" type="file.verilog" enable="1"/>
         <File path="src/video_timing_control.v" type="file.verilog" enable="1"/>
+        <File path="src/rgb_gray.v" type="file.verilog" enable="1"/>
         <File path="src/top.cst" type="file.cst" enable="1"/>
         <File path="src/lcd.sdc" type="file.sdc" enable="1"/>
         <File path="src/top.rao" type="file.gao" enable="0"/>

@@ -30,6 +30,7 @@
         <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v" type="verilog"/>
         <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_frame_buffer\video_frame_buffer.v" type="verilog"/>
         <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_control.v" type="verilog"/>
+        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\rgb_gray.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>

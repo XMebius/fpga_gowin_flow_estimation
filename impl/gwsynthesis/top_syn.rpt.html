@@ -81,6 +81,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_rx.v<br>
 Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v<br>
 Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_frame_buffer\video_frame_buffer.v<br>
 Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_control.v<br>
+Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\rgb_gray.v<br>
 </td>
 </tr>
 <tr>
@@ -105,7 +106,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Tue Jan 16 20:21:59 2024
+<td>Wed Jan 17 18:54:26 2024
 </td>
 </tr>
 <tr>
@@ -121,11 +122,11 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 </tr>
 <tr>
 <td class="label">Synthesis Process</td>
-<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s, Peak memory usage = 104.215MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.203s, Elapsed time = 0h 0m 0.209s, Peak memory usage = 104.215MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.39s, Elapsed time = 0h 0m 0.391s, Peak memory usage = 104.215MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.328s, Elapsed time = 0h 0m 0.339s, Peak memory usage = 104.215MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.078s, Elapsed time = 0h 0m 0.098s, Peak memory usage = 104.215MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0.093s, Elapsed time = 0h 0m 0.083s, Peak memory usage = 104.215MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.022s, Peak memory usage = 104.215MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.008s, Peak memory usage = 104.215MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.296s, Elapsed time = 0h 0m 0.303s, Peak memory usage = 104.215MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0.312s, Elapsed time = 0h 0m 0.313s, Peak memory usage = 104.215MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0.093s, Elapsed time = 0h 0m 0.1s, Peak memory usage = 104.215MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 14s, Elapsed time = 0h 0m 14s, Peak memory usage = 108.762MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0.281s, Elapsed time = 0h 0m 0.281s, Peak memory usage = 108.762MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.546s, Elapsed time = 0h 0m 0.492s, Peak memory usage = 113.207MB<br/></td>
+<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s, Peak memory usage = 343.281MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.203s, Elapsed time = 0h 0m 0.212s, Peak memory usage = 343.281MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.406s, Elapsed time = 0h 0m 0.386s, Peak memory usage = 343.281MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.359s, Elapsed time = 0h 0m 0.363s, Peak memory usage = 343.281MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.093s, Elapsed time = 0h 0m 0.095s, Peak memory usage = 343.281MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0.093s, Elapsed time = 0h 0m 0.091s, Peak memory usage = 343.281MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.021s, Peak memory usage = 343.281MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.007s, Peak memory usage = 343.281MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.312s, Elapsed time = 0h 0m 0.305s, Peak memory usage = 343.281MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0.312s, Elapsed time = 0h 0m 0.305s, Peak memory usage = 343.281MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0.109s, Elapsed time = 0h 0m 0.098s, Peak memory usage = 343.281MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 13s, Elapsed time = 0h 0m 13s, Peak memory usage = 343.281MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0.25s, Elapsed time = 0h 0m 0.27s, Peak memory usage = 343.281MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.453s, Elapsed time = 0h 0m 0.478s, Peak memory usage = 343.281MB<br/></td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 17s, Elapsed time = 0h 0m 17s, Peak memory usage = 113.207MB</td>
+<td>CPU time = 0h 0m 16s, Elapsed time = 0h 0m 16s, Peak memory usage = 343.281MB</td>
 </tr>
 </table>
 <h1><a name="resource">Resource</a></h1>
@@ -173,11 +174,11 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 </tr>
 <tr>
 <td class="label"><b>Register </b></td>
-<td>2152</td>
+<td>2026</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFF</td>
-<td>115</td>
+<td>117</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFE</td>
@@ -209,27 +210,27 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFC</td>
-<td>1178</td>
+<td>1069</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFCE</td>
-<td>585</td>
+<td>566</td>
 </tr>
 <tr>
 <td class="label"><b>LUT </b></td>
-<td>3960</td>
+<td>3808</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT2</td>
-<td>728</td>
+<td>661</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT3</td>
-<td>968</td>
+<td>895</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT4</td>
-<td>2264</td>
+<td>2252</td>
 </tr>
 <tr>
 <td class="label"><b>ALU </b></td>
@@ -253,11 +254,11 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 </tr>
 <tr>
 <td class="label"><b>INV </b></td>
-<td>51</td>
+<td>52</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspINV</td>
-<td>51</td>
+<td>52</td>
 </tr>
 <tr>
 <td class="label"><b>IOLOGIC </b></td>
@@ -288,6 +289,10 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td></td>
 </tr>
 <tr>
+<td class="label">&nbsp&nbsp&nbsp&nbspMULT9X9</td>
+<td>1</td>
+</tr>
+<tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspMULT18X18</td>
 <td>2</td>
 </tr>
@@ -297,15 +302,15 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspMULTADDALU18X18</td>
-<td>10</td>
+<td>12</td>
 </tr>
 <tr>
 <td class="label"><b>BSRAM </b></td>
-<td>42</td>
+<td>38</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspSDPB</td>
-<td>22</td>
+<td>18</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspSDPX9B</td>
@@ -345,13 +350,13 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>5084(4011 LUT, 347 ALU, 121 RAM16) / 20736</td>
-<td>25%</td>
+<td>4933(3860 LUT, 347 ALU, 121 RAM16) / 20736</td>
+<td>24%</td>
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>2152 / 16173</td>
-<td>14%</td>
+<td>2026 / 16173</td>
+<td>13%</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as Latch</td>
@@ -360,13 +365,13 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as FF</td>
-<td>2152 / 16173</td>
-<td>14%</td>
+<td>2026 / 16173</td>
+<td>13%</td>
 </tr>
 <tr>
 <td class="label">BSRAM</td>
-<td>42 / 46</td>
-<td>92%</td>
+<td>38 / 46</td>
+<td>83%</td>
 </tr>
 </table>
 <h1><a name="timing">Timing</a></h1>
@@ -519,7 +524,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>1</td>
 <td>clk</td>
 <td>27.0(MHz)</td>
-<td>169.3(MHz)</td>
+<td>168.5(MHz)</td>
 <td>8</td>
 <td>TOP</td>
 </tr>
@@ -527,8 +532,8 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>2</td>
 <td>cam_pclk</td>
 <td>100.0(MHz)</td>
-<td>142.4(MHz)</td>
-<td>10</td>
+<td>153.9(MHz)</td>
+<td>9</td>
 <td>TOP</td>
 </tr>
 <tr>
@@ -594,11 +599,11 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>-4.609</td>
+<td>-4.083</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>1674.923</td>
+<td>1674.397</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
@@ -668,7 +673,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>0.232</td>
 <td>tC2Q</td>
 <td>RF</td>
-<td>2</td>
+<td>3</td>
 <td>u_ov5640_rx/vs_cnt_7_s0/Q</td>
 </tr>
 <tr>
@@ -677,7 +682,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>u_ov5640_rx/n239_s3/I1</td>
+<td>u_ov5640_rx/n81_s2/I1</td>
 </tr>
 <tr>
 <td>1671.886</td>
@@ -685,7 +690,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>u_ov5640_rx/n239_s3/F</td>
+<td>u_ov5640_rx/n81_s2/F</td>
 </tr>
 <tr>
 <td>1672.124</td>
@@ -693,34 +698,18 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>u_ov5640_rx/n239_s2/I3</td>
+<td>u_ov5640_rx/n81_s1/I2</td>
 </tr>
 <tr>
-<td>1672.495</td>
-<td>0.371</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>u_ov5640_rx/n239_s2/F</td>
-</tr>
-<tr>
-<td>1672.731</td>
-<td>0.237</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>u_ov5640_rx/n81_s1/I3</td>
-</tr>
-<tr>
-<td>1673.103</td>
-<td>0.371</td>
+<td>1672.577</td>
+<td>0.453</td>
 <td>tINS</td>
 <td>FF</td>
 <td>6</td>
 <td>u_ov5640_rx/n81_s1/F</td>
 </tr>
 <tr>
-<td>1673.339</td>
+<td>1672.813</td>
 <td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
@@ -728,7 +717,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>in_Video_Frame_vs_s1/I1</td>
 </tr>
 <tr>
-<td>1673.895</td>
+<td>1673.369</td>
 <td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
@@ -736,7 +725,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>in_Video_Frame_vs_s1/F</td>
 </tr>
 <tr>
-<td>1674.131</td>
+<td>1673.605</td>
 <td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
@@ -744,7 +733,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>u_Video_Frame_Buffer/vfb_ddr3_wrapper_inst/u0_dma_frame_buffer/u_dma_write_ctrl/video_vs_n_rising_s0/I1</td>
 </tr>
 <tr>
-<td>1674.687</td>
+<td>1674.161</td>
 <td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
@@ -752,7 +741,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>u_Video_Frame_Buffer/vfb_ddr3_wrapper_inst/u0_dma_frame_buffer/u_dma_write_ctrl/video_vs_n_rising_s0/F</td>
 </tr>
 <tr>
-<td>1674.923</td>
+<td>1674.397</td>
 <td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
@@ -783,7 +772,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>0.170</td>
 <td>tCL</td>
 <td>RR</td>
-<td>556</td>
+<td>557</td>
 <td>u_clkdiv/CLKOUT</td>
 </tr>
 <tr>
@@ -823,12 +812,12 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>6</td>
+<td>5</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 2.407, 59.271%; route: 1.422, 35.016%; tC2Q: 0.232, 5.713%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.118, 59.915%; route: 1.185, 33.522%; tC2Q: 0.232, 6.563%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 </table>
@@ -838,11 +827,11 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>-3.817</td>
+<td>-3.291</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>1674.131</td>
+<td>1673.605</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
@@ -912,7 +901,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>0.232</td>
 <td>tC2Q</td>
 <td>RF</td>
-<td>2</td>
+<td>3</td>
 <td>u_ov5640_rx/vs_cnt_7_s0/Q</td>
 </tr>
 <tr>
@@ -921,7 +910,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>u_ov5640_rx/n239_s3/I1</td>
+<td>u_ov5640_rx/n81_s2/I1</td>
 </tr>
 <tr>
 <td>1671.886</td>
@@ -929,7 +918,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>u_ov5640_rx/n239_s3/F</td>
+<td>u_ov5640_rx/n81_s2/F</td>
 </tr>
 <tr>
 <td>1672.124</td>
@@ -937,34 +926,18 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>u_ov5640_rx/n239_s2/I3</td>
+<td>u_ov5640_rx/n81_s1/I2</td>
 </tr>
 <tr>
-<td>1672.495</td>
-<td>0.371</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>u_ov5640_rx/n239_s2/F</td>
-</tr>
-<tr>
-<td>1672.731</td>
-<td>0.237</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>u_ov5640_rx/n81_s1/I3</td>
-</tr>
-<tr>
-<td>1673.103</td>
-<td>0.371</td>
+<td>1672.577</td>
+<td>0.453</td>
 <td>tINS</td>
 <td>FF</td>
 <td>6</td>
 <td>u_ov5640_rx/n81_s1/F</td>
 </tr>
 <tr>
-<td>1673.339</td>
+<td>1672.813</td>
 <td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
@@ -972,7 +945,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>in_Video_Frame_vs_s1/I1</td>
 </tr>
 <tr>
-<td>1673.895</td>
+<td>1673.369</td>
 <td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
@@ -980,7 +953,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>in_Video_Frame_vs_s1/F</td>
 </tr>
 <tr>
-<td>1674.131</td>
+<td>1673.605</td>
 <td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
@@ -1011,7 +984,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>0.170</td>
 <td>tCL</td>
 <td>RR</td>
-<td>556</td>
+<td>557</td>
 <td>u_clkdiv/CLKOUT</td>
 </tr>
 <tr>
@@ -1051,12 +1024,12 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
-<td>5</td>
+<td>4</td>
 </tr>
 <tr>
 <td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 1.852, 56.653%; route: 1.185, 36.250%; tC2Q: 0.232, 7.097%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 1.563, 56.981%; route: 0.948, 34.561%; tC2Q: 0.232, 8.458%</td></tr>
 <tr>
 <td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 </table>
@@ -1116,7 +1089,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>0.170</td>
 <td>tCL</td>
 <td>RR</td>
-<td>1671</td>
+<td>1539</td>
 <td>u_DDR3MI/gw3_top/i4/fclkdiv/CLKOUT</td>
 </tr>
 <tr>
@@ -1215,7 +1188,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>0.170</td>
 <td>tCL</td>
 <td>RR</td>
-<td>556</td>
+<td>557</td>
 <td>u_clkdiv/CLKOUT</td>
 </tr>
 <tr>
@@ -1320,7 +1293,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>0.170</td>
 <td>tCL</td>
 <td>RR</td>
-<td>1671</td>
+<td>1539</td>
 <td>u_DDR3MI/gw3_top/i4/fclkdiv/CLKOUT</td>
 </tr>
 <tr>
@@ -1387,7 +1360,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>0.170</td>
 <td>tCL</td>
 <td>RR</td>
-<td>556</td>
+<td>557</td>
 <td>u_clkdiv/CLKOUT</td>
 </tr>
 <tr>
@@ -1492,7 +1465,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>0.170</td>
 <td>tCL</td>
 <td>RR</td>
-<td>556</td>
+<td>557</td>
 <td>u_clkdiv/CLKOUT</td>
 </tr>
 <tr>
@@ -1559,7 +1532,7 @@ Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_co
 <td>0.170</td>
 <td>tCL</td>
 <td>RR</td>
-<td>1671</td>
+<td>1539</td>
 <td>u_DDR3MI/gw3_top/i4/fclkdiv/CLKOUT</td>
 </tr>
 <tr>

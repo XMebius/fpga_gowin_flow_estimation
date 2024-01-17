@@ -17,7 +17,7 @@
   "SubInsts" : [
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 322,
+    "InstLine" : 338,
     "InstName" : "u_DDR3MI",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ddr3_memory_interface/DDR3MI.v",
     "ModuleLine" : 1,
@@ -25,7 +25,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 384,
+    "InstLine" : 400,
     "InstName" : "u_HDMI_TX",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/dvi_tx/DVI_TX_Top.v",
     "ModuleLine" : 1,
@@ -33,7 +33,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 153,
+    "InstLine" : 160,
     "InstName" : "u_tmds_rpll",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/TMDS_rPLL.v",
     "ModuleLine" : 9,
@@ -41,7 +41,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 170,
+    "InstLine" : 177,
     "InstName" : "u_cmos_pll",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/cmos_pll.v",
     "ModuleLine" : 9,
@@ -49,7 +49,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 176,
+    "InstLine" : 183,
     "InstName" : "u_mem_pll",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/mem_pll.v",
     "ModuleLine" : 9,
@@ -57,7 +57,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 193,
+    "InstLine" : 200,
     "InstName" : "video_block",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/video_block_move.v",
     "ModuleLine" : 1,
@@ -83,7 +83,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 207,
+    "InstLine" : 214,
     "InstName" : "u_ov5640_i2c",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/ov5640_i2c.v",
     "ModuleLine" : 23,
@@ -139,7 +139,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 219,
+    "InstLine" : 226,
     "InstName" : "u_ov5640_rx",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_rx.v",
     "ModuleLine" : 3,
@@ -147,7 +147,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 234,
+    "InstLine" : 241,
     "InstName" : "u_resize_fifo",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/fifo_top/resize_fifo.v",
     "ModuleLine" : 701,
@@ -165,7 +165,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 260,
+    "InstLine" : 267,
     "InstName" : "u_helai_video_scale",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/helai_video_scale.v",
     "ModuleLine" : 1,
@@ -217,7 +217,15 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 284,
+    "InstLine" : 290,
+    "InstName" : "u_rgb_gray",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/rgb_gray.v",
+    "ModuleLine" : 5,
+    "ModuleName" : "RGB2Gray"
+   },
+   {
+    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+    "InstLine" : 300,
     "InstName" : "u_Video_Frame_Buffer",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_frame_buffer/video_frame_buffer.v",
     "ModuleLine" : 3785,
@@ -235,7 +243,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 367,
+    "InstLine" : 383,
     "InstName" : "video_timing",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_timing_control.v",
     "ModuleLine" : 10,

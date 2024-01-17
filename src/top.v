@@ -65,7 +65,7 @@ wire                   init_calib_complete;
 //SRAM parameters
 parameter ADDR_WIDTH          = 28;    //存储单元是byte，总容量=2^27*16bit = 2Gbit,增加1位rank地址，{rank[0],bank[2:0],row[13:0],cloumn[9:0]}
 parameter DATA_WIDTH          = 128;   //与生成DDR3IP有关，此ddr3 2Gbit, x16， 时钟比例1:4 ，则固定128bit
-parameter WR_VIDEO_WIDTH      = 32;    //写视频数据位宽  
+parameter WR_VIDEO_WIDTH      = 16;    //写视频数据位宽  
 parameter RD_VIDEO_WIDTH      = 32;    //读视频数据位宽 
 
 ////////// 图像缩放控制参数,很重要,只需要改这里就可以控制输出分辨率了
@@ -93,7 +93,7 @@ wire        color_video_vs ;
 wire        vtc_hs_out ;
 wire        vtc_vs_out ;
 wire        vtc_de_out ;
-wire [23:0] vtc_rgb_out;
+wire [7:0] vtc_rgb_out;
 wire        vtc_req_out;
 
 assign cam_xclk = cmos_clk;
@@ -117,6 +117,8 @@ wire        video_scale_data_vs  ;
 wire        video_scale_data_de  ;
 wire [23:0] video_scale_data_out ;
 wire [23:0] scaler_fifo_rdout_out;
+wire [23:0] gray_data_in = video_scale_data_out;
+wire [7:0]  gray_data_o;
 wire empty            ;
 wire o_vid_fifo_read  ;
 
@@ -135,18 +137,23 @@ wire        video_scale_vs_in   = ov5640_vs                  ;
 `endif
 
 wire scaler_reset        = !cam_init_done || !rst_n;
+wire gray_reset = !cam_init_done || !rst_n;
 wire scaler_fifo_rclk_in = video_clk       ;
+wire rgb_gray_clk = video_clk;
 wire scaler_fifo_rden_in = o_vid_fifo_read;
+wire gray_out_de;
 
 wire                      in_Video_Frame_clk  = scaler_fifo_rclk_in;
 wire                      in_Video_Frame_vs   = !video_scale_data_vs;
-wire                      in_Video_Frame_de   = video_scale_data_de;
-wire [WR_VIDEO_WIDTH-1:0] in_Video_Frame_data = {8'h00,video_scale_data_out};
+
+wire                      gray_in_de   = video_scale_data_de;
+wire                      in_Video_Frame_de   = gray_out_de;
+wire [WR_VIDEO_WIDTH-1:0] in_Video_Frame_data = {8'h00,gray_data_o};
 
 wire out_Video_Frame_clk = video_clk  ; 
 wire out_Video_Frame_vs  = !vtc_vs_out; 
 wire out_Video_Frame_de  = vtc_req_out; 
-wire [23:0] vtc_rgb_in   = out_Video_Frame_data[23:0];
+wire [7:0] vtc_rgb_in   = out_Video_Frame_data[7:0];
 
 /////////////////////// 时钟 PLL
 // 生成 1280*720@60Hz 视频所需的 371.25 M 串行时钟
@@ -280,6 +287,15 @@ helai_video_scale #(
 	.i_scaler_type   (0)		//Use nearest neighbor resize instead of bilinear
 );
 
+RGB2Gray u_rgb_gray(
+    .I_clk(rgb_gray_clk),
+    .I_reset_p(gray_reset),
+    .I_pixel_data_valid(gray_in_de),    // [23:0]
+    .I_pixel_data_RGB(gray_data_in),
+    .O_pixel_data_valid(gray_out_de),
+    .O_pixel_data_Gray(gray_data_o)     // [7:0]
+);
+
 // 视频缓存模块,直接调用的 ideo_Frame_Buffer IP核
 Video_Frame_Buffer_Top u_Video_Frame_Buffer( 
     .I_rst_n              (init_calib_complete ),//rst_n            ),
@@ -292,7 +308,7 @@ Video_Frame_Buffer_Top u_Video_Frame_Buffer(
     .I_vin0_clk           (in_Video_Frame_clk ),
     .I_vin0_vs_n          (in_Video_Frame_vs  ),//只接收负极性
     .I_vin0_de            (in_Video_Frame_de  ),
-    .I_vin0_data          (in_Video_Frame_data),
+    .I_vin0_data          (in_Video_Frame_data),    // [15:0]
     .O_vin0_fifo_full     (),
     // video data output            
     .I_vout0_clk          (out_Video_Frame_clk ),
@@ -389,8 +405,8 @@ DVI_TX_Top u_HDMI_TX(
     .I_rgb_hs      (vtc_hs_out        ),    
     .I_rgb_de      (vtc_de_out        ), 
     .I_rgb_r       (vtc_rgb_out[ 7: 0]),  //tp0_data_r
-    .I_rgb_g       (vtc_rgb_out[15: 8]),  
-    .I_rgb_b       (vtc_rgb_out[23:16]),  
+    .I_rgb_g       (vtc_rgb_out[ 7: 0]),  
+    .I_rgb_b       (vtc_rgb_out[ 7: 0]),  
     .O_tmds_clk_p  (O_tmds_clk_p      ),
     .O_tmds_clk_n  (O_tmds_clk_n      ),
     .O_tmds_data_p (O_tmds_data_p     ),  //{r,g,b}
