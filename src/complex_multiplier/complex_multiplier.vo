@@ -1,0 +1,206 @@
+//Copyright (C)2014-2023 Gowin Semiconductor Corporation.
+//All rights reserved.
+//File Title: Post-PnR Simulation Model file
+//GOWIN Version: V1.9.9 Beta-4 Education
+//Created Time: Thu Jan 18 20:18:29 2024
+
+`timescale 100 ps/100 ps
+module Complex_Multiplier_Top(
+	ce,
+	clk,
+	reset,
+	real1,
+	real2,
+	imag1,
+	imag2,
+	realo,
+	imago
+);
+input ce;
+input clk;
+input reset;
+input [7:0] real1;
+input [7:0] real2;
+input [7:0] imag1;
+input [7:0] imag2;
+output [18:0] realo;
+output [18:0] imago;
+wire GND;
+wire VCC;
+wire ce;
+wire clk;
+wire [7:0] imag1;
+wire [7:0] imag2;
+wire [18:0] imago;
+wire [7:0] real1;
+wire [7:0] real2;
+wire [18:0] realo;
+wire reset;
+wire [17:0] \u_complex_mult/m ;
+wire [17:0] \u_complex_mult/n ;
+wire [17:0] \u_complex_mult/g ;
+wire [17:0] \u_complex_mult/h ;
+wire [8:0] \u_complex_mult/SOA ;
+wire [8:0] \u_complex_mult/SOB ;
+wire [8:0] \u_complex_mult/SOA_0 ;
+wire [8:0] \u_complex_mult/SOB_0 ;
+wire [53:19] \u_complex_mult/DOUT ;
+wire [54:0] \u_complex_mult/CASO ;
+wire [8:0] \u_complex_mult/SOA_1 ;
+wire [8:0] \u_complex_mult/SOB_1 ;
+wire [8:0] \u_complex_mult/SOA_2 ;
+wire [8:0] \u_complex_mult/SOB_2 ;
+wire [53:19] \u_complex_mult/DOUT_0 ;
+wire [54:0] \u_complex_mult/CASO_0 ;
+VCC VCC_cZ (
+  .V(VCC)
+);
+GND GND_cZ (
+  .G(GND)
+);
+GSR GSR (
+	.GSRI(VCC)
+);
+MULT9X9 \u_complex_mult/mult9x9_instp  (
+	.ASIGN(GND),
+	.BSIGN(GND),
+	.CE(ce),
+	.CLK(clk),
+	.RESET(reset),
+	.ASEL(GND),
+	.BSEL(GND),
+	.SIA({GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.SIB({GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.A({GND, real1[7:0]}),
+	.B({GND, real2[7:0]}),
+	.SOA({\u_complex_mult/SOA [8:0]}),
+	.SOB({\u_complex_mult/SOB [8:0]}),
+	.DOUT({\u_complex_mult/m [17:0]})
+);
+defparam \u_complex_mult/mult9x9_instp .AREG=1'b0;
+defparam \u_complex_mult/mult9x9_instp .BREG=1'b0;
+defparam \u_complex_mult/mult9x9_instp .SOA_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instp .OUT_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instp .PIPE_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instp .ASIGN_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instp .BSIGN_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instp .MULT_RESET_MODE="SYNC";
+MULT9X9 \u_complex_mult/mult9x9_instq  (
+	.ASIGN(GND),
+	.BSIGN(GND),
+	.CE(ce),
+	.CLK(clk),
+	.RESET(reset),
+	.ASEL(GND),
+	.BSEL(GND),
+	.SIA({GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.SIB({GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.A({GND, imag1[7:0]}),
+	.B({GND, imag2[7:0]}),
+	.SOA({\u_complex_mult/SOA_0 [8:0]}),
+	.SOB({\u_complex_mult/SOB_0 [8:0]}),
+	.DOUT({\u_complex_mult/n [17:0]})
+);
+defparam \u_complex_mult/mult9x9_instq .AREG=1'b0;
+defparam \u_complex_mult/mult9x9_instq .BREG=1'b0;
+defparam \u_complex_mult/mult9x9_instq .SOA_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instq .OUT_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instq .PIPE_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instq .ASIGN_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instq .BSIGN_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instq .MULT_RESET_MODE="SYNC";
+ALU54D \u_complex_mult/alu54d_instp  (
+	.ASIGN(GND),
+	.BSIGN(GND),
+	.ACCLOAD(GND),
+	.CE(ce),
+	.CLK(clk),
+	.RESET(reset),
+	.A({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, \u_complex_mult/m [17:0]}),
+	.B({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, \u_complex_mult/n [17:0]}),
+	.CASI({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.CASO({\u_complex_mult/CASO [54:0]}),
+	.DOUT({\u_complex_mult/DOUT [53:19], realo[18:0]})
+);
+defparam \u_complex_mult/alu54d_instp .AREG=1'b0;
+defparam \u_complex_mult/alu54d_instp .BREG=1'b0;
+defparam \u_complex_mult/alu54d_instp .OUT_REG=1'b1;
+defparam \u_complex_mult/alu54d_instp .ASIGN_REG=1'b0;
+defparam \u_complex_mult/alu54d_instp .BSIGN_REG=1'b0;
+defparam \u_complex_mult/alu54d_instp .B_ADD_SUB=1'b1;
+defparam \u_complex_mult/alu54d_instp .C_ADD_SUB=1'b0;
+defparam \u_complex_mult/alu54d_instp .ACCLOAD_REG=1'b0;
+defparam \u_complex_mult/alu54d_instp .ALUD_MODE=2;
+defparam \u_complex_mult/alu54d_instp .ALU_RESET_MODE="SYNC";
+MULT9X9 \u_complex_mult/mult9x9_instg  (
+	.ASIGN(GND),
+	.BSIGN(GND),
+	.CE(ce),
+	.CLK(clk),
+	.RESET(reset),
+	.ASEL(GND),
+	.BSEL(GND),
+	.SIA({GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.SIB({GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.A({GND, real1[7:0]}),
+	.B({GND, imag2[7:0]}),
+	.SOA({\u_complex_mult/SOA_1 [8:0]}),
+	.SOB({\u_complex_mult/SOB_1 [8:0]}),
+	.DOUT({\u_complex_mult/g [17:0]})
+);
+defparam \u_complex_mult/mult9x9_instg .AREG=1'b0;
+defparam \u_complex_mult/mult9x9_instg .BREG=1'b0;
+defparam \u_complex_mult/mult9x9_instg .SOA_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instg .OUT_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instg .PIPE_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instg .ASIGN_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instg .BSIGN_REG=1'b0;
+defparam \u_complex_mult/mult9x9_instg .MULT_RESET_MODE="SYNC";
+MULT9X9 \u_complex_mult/mult9x9_insth  (
+	.ASIGN(GND),
+	.BSIGN(GND),
+	.CE(ce),
+	.CLK(clk),
+	.RESET(reset),
+	.ASEL(GND),
+	.BSEL(GND),
+	.SIA({GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.SIB({GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.A({GND, imag1[7:0]}),
+	.B({GND, real2[7:0]}),
+	.SOA({\u_complex_mult/SOA_2 [8:0]}),
+	.SOB({\u_complex_mult/SOB_2 [8:0]}),
+	.DOUT({\u_complex_mult/h [17:0]})
+);
+defparam \u_complex_mult/mult9x9_insth .AREG=1'b0;
+defparam \u_complex_mult/mult9x9_insth .BREG=1'b0;
+defparam \u_complex_mult/mult9x9_insth .SOA_REG=1'b0;
+defparam \u_complex_mult/mult9x9_insth .OUT_REG=1'b0;
+defparam \u_complex_mult/mult9x9_insth .PIPE_REG=1'b0;
+defparam \u_complex_mult/mult9x9_insth .ASIGN_REG=1'b0;
+defparam \u_complex_mult/mult9x9_insth .BSIGN_REG=1'b0;
+defparam \u_complex_mult/mult9x9_insth .MULT_RESET_MODE="SYNC";
+ALU54D \u_complex_mult/alu54d_instq  (
+	.ASIGN(GND),
+	.BSIGN(GND),
+	.ACCLOAD(GND),
+	.CE(ce),
+	.CLK(clk),
+	.RESET(reset),
+	.A({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, \u_complex_mult/g [17:0]}),
+	.B({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, \u_complex_mult/h [17:0]}),
+	.CASI({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.CASO({\u_complex_mult/CASO_0 [54:0]}),
+	.DOUT({\u_complex_mult/DOUT_0 [53:19], imago[18:0]})
+);
+defparam \u_complex_mult/alu54d_instq .AREG=1'b0;
+defparam \u_complex_mult/alu54d_instq .BREG=1'b0;
+defparam \u_complex_mult/alu54d_instq .OUT_REG=1'b1;
+defparam \u_complex_mult/alu54d_instq .ASIGN_REG=1'b0;
+defparam \u_complex_mult/alu54d_instq .BSIGN_REG=1'b0;
+defparam \u_complex_mult/alu54d_instq .B_ADD_SUB=1'b0;
+defparam \u_complex_mult/alu54d_instq .C_ADD_SUB=1'b0;
+defparam \u_complex_mult/alu54d_instq .ACCLOAD_REG=1'b0;
+defparam \u_complex_mult/alu54d_instq .ALUD_MODE=2;
+defparam \u_complex_mult/alu54d_instq .ALU_RESET_MODE="SYNC";
+endmodule

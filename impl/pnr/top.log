@@ -1,7 +1,7 @@
-Reading netlist file: "Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\impl\gwsynthesis\top.vg"
-Parsing netlist file "Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\impl\gwsynthesis\top.vg" completed
+Reading netlist file: "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\impl\gwsynthesis\top.vg"
+Parsing netlist file "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\impl\gwsynthesis\top.vg" completed
 Processing netlist completed
-Reading constraint file: "Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.cst"
+Reading constraint file: "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\top.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -22,10 +22,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\impl\pnr\top.power.html" completed
-Generate file "Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\impl\pnr\top.pin.html" completed
-Generate file "Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\impl\pnr\top.rpt.html" completed
-Generate file "Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\impl\pnr\top.rpt.txt" completed
-Generate file "Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\impl\pnr\top.tr.html" completed
-Thu Jan 18 17:34:27 2024
+Generate file "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\impl\pnr\top.power.html" completed
+Generate file "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\impl\pnr\top.pin.html" completed
+Generate file "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\impl\pnr\top.rpt.html" completed
+Generate file "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\impl\pnr\top.rpt.txt" completed
+Generate file "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\impl\pnr\top.tr.html" completed
+Thu Jan 18 21:49:51 2024
 

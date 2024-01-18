@@ -1,0 +1,40 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v'
+Analyzing included file 'define.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v":347)
+Back to file 'F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v":347)
+Analyzing included file 'F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\static_macro_define.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v":347)
+Back to file 'F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v":347)
+Analyzing included file 'parameter.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v":347)
+Back to file 'F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v":347)
+Analyzing Verilog file 'F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v'
+Analyzing included file 'define.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v":1)
+Back to file 'F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v":1)
+Analyzing included file 'F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\static_macro_define.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v":2)
+Back to file 'F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v":2)
+Analyzing included file 'parameter.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v":19)
+Back to file 'F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v":19)
+WARN  (EX3706) : Empty port in module declaration("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v":18)
+Compiling module 'Integer_Multiply_Divider_Top'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu_wrap.v":3)
+Compiling module '**'("F:\schoolwork\chipdesign\IDE\Gowin\Gowin_V1.9.9Beta-4_Education\IDE\ipcore\INT_MULT_DIV\data\mdu.v":0)
+NOTE  (EX0101) : Current top module is "Integer_Multiply_Divider_Top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\integer_multiply_divider\temp\integer_multiply_divider\integer_multiply_divider.vg" completed
+Generate template file "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\integer_multiply_divider\temp\integer_multiply_divider\integer_multiply_divider_tmp.v" completed
+[100%] Generate report file "F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\integer_multiply_divider\temp\integer_multiply_divider\integer_multiply_divider_syn.rpt.html" completed
+GowinSynthesis finish

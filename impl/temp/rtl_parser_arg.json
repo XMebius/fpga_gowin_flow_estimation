@@ -2,115 +2,127 @@
  "Device" : "GW2A-18C",
  "Files" : [
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ddr3_memory_interface/DDR3MI.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/ddr3_memory_interface/DDR3MI.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/dvi_tx/DVI_TX_Top.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/dvi_tx/DVI_TX_Top.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/fifo_hs/video_fifo.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/fifo_hs/video_fifo.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/fifo_top/resize_fifo.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/fifo_top/resize_fifo.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/TMDS_rPLL.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/gowin_rpll/TMDS_rPLL.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/cmos_pll.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/gowin_rpll/cmos_pll.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/mem_pll.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/gowin_rpll/mem_pll.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_rpll/sys_pll.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/gowin_rpll/sys_pll.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/rgb_display.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/helai_color_move/rgb_display.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/video_block_move.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/helai_color_move/video_block_move.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_color_move/video_timing_color.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/helai_color_move/video_timing_color.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/helai_video_scale.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/helai_video_scale/helai_video_scale.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramDualPort.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/helai_video_scale/ramDualPort.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/helai_video_scale/ramFifo.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/helai_video_scale/ramFifo.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_config.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/integer_multiply_divider/integer_multiply_divider.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_bit_ctrl.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/ov5640_i2c_master/i2c_config.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_byte_ctrl.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/ov5640_i2c_master/i2c_master_bit_ctrl.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_defines.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/ov5640_i2c_master/i2c_master_byte_ctrl.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/i2c_master_top.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/ov5640_i2c_master/i2c_master_defines.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/ov5640_i2c.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/ov5640_i2c_master/i2c_master_top.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/ov5640_reg_cfg.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/ov5640_i2c_master/ov5640_i2c.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_i2c_master/timescale.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/ov5640_i2c_master/ov5640_reg_cfg.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ov5640_rx.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/ov5640_i2c_master/timescale.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/rgb_gray.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/ov5640_rx.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/rgb_gray.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/top.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_frame_buffer/video_frame_buffer.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/top_sp.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_timing_control.v",
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/video_frame_buffer/video_frame_buffer.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/video_timing_control.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/integer_division/integer_division.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/complex_multiplier/complex_multiplier.v",
    "Type" : "verilog"
   }
  ],
@@ -118,7 +130,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/impl/temp/rtl_parser.result",
+ "ResultFile" : "F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/impl/temp/rtl_parser.result",
  "Top" : "top",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"

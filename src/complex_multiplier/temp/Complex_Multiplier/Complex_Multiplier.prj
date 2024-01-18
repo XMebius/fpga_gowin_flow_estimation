@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW2A-18C" package="PBGA256" speed="8" partNumber="GW2A-LV18PG256C8/I7"/>
+    <FileList>
+        <File path="F:/schoolwork/chipdesign/IDE/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/Complex_Multiplier/data/cmult_wrap.v" type="verilog"/>
+        <File path="F:/schoolwork/chipdesign/IDE/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/Complex_Multiplier/data/comp_mult.v" type="verilog"/>
+        <File path="F:/schoolwork/chipdesign/IDE/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/Complex_Multiplier/data/static_macro_define.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="include_path" value="F:/schoolwork/chipdesign/IDE/Gowin/Gowin_V1.9.9Beta-4_Education/IDE/ipcore/Complex_Multiplier/data"/>
+        <Option type="include_path" value="F:/schoolwork/chipdesign/codes/own/fpga_gowin_flow_estimation-main/fpga_gowin_flow_estimation-main/src/complex_multiplier/temp/Complex_Multiplier"/>
+        <Option type="output_file" value="complex_multiplier.vg"/>
+        <Option type="output_template" value="complex_multiplier_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>

@@ -4,39 +4,42 @@
     <Version>beta</Version>
     <Device id="GW2A-18C" package="PBGA256" speed="8" partNumber="GW2A-LV18PG256C8/I7"/>
     <FileList>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ddr3_memory_interface\DDR3MI.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\dvi_tx\DVI_TX_Top.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\fifo_hs\video_fifo.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\fifo_top\resize_fifo.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\gowin_rpll\TMDS_rPLL.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\gowin_rpll\cmos_pll.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\gowin_rpll\mem_pll.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\gowin_rpll\sys_pll.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_color_move\rgb_display.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_color_move\video_block_move.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_color_move\video_timing_color.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_video_scale\helai_video_scale.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_video_scale\ramDualPort.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_video_scale\ramFifo.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_i2c_master\i2c_config.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_i2c_master\i2c_master_bit_ctrl.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_i2c_master\i2c_master_byte_ctrl.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_i2c_master\i2c_master_defines.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_i2c_master\i2c_master_top.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_i2c_master\ov5640_i2c.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_i2c_master\ov5640_reg_cfg.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_i2c_master\timescale.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_rx.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\rgb_gray.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top_sp.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_frame_buffer\video_frame_buffer.v" type="verilog"/>
-        <File path="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_control.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\ddr3_memory_interface\DDR3MI.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\dvi_tx\DVI_TX_Top.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\fifo_hs\video_fifo.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\fifo_top\resize_fifo.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\gowin_rpll\TMDS_rPLL.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\gowin_rpll\cmos_pll.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\gowin_rpll\mem_pll.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\gowin_rpll\sys_pll.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\helai_color_move\rgb_display.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\helai_color_move\video_block_move.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\helai_color_move\video_timing_color.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\helai_video_scale\helai_video_scale.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\helai_video_scale\ramDualPort.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\helai_video_scale\ramFifo.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\integer_multiply_divider\integer_multiply_divider.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\ov5640_i2c_master\i2c_config.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\ov5640_i2c_master\i2c_master_bit_ctrl.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\ov5640_i2c_master\i2c_master_byte_ctrl.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\ov5640_i2c_master\i2c_master_defines.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\ov5640_i2c_master\i2c_master_top.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\ov5640_i2c_master\ov5640_i2c.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\ov5640_i2c_master\ov5640_reg_cfg.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\ov5640_i2c_master\timescale.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\ov5640_rx.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\rgb_gray.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\top.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\top_sp.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\video_frame_buffer\video_frame_buffer.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\video_timing_control.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\integer_division\integer_division.v" type="verilog"/>
+        <File path="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\complex_multiplier\complex_multiplier.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
         <Option type="looplimit" value="2000"/>
-        <Option type="output_file" value="Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\impl\gwsynthesis\top.vg"/>
+        <Option type="output_file" value="F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\impl\gwsynthesis\top.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
         <Option type="ram_rw_check" value="1"/>
         <Option type="top_module" value="top"/>

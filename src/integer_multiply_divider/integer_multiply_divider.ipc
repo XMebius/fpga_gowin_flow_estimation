@@ -1,0 +1,13 @@
+[General]
+ipc_version=4
+file=integer_multiply_divider
+module=Integer_Multiply_Divider_Top
+target_device=gw2a18c-011
+type=imd
+version=1.0
+
+[Config]
+DISABLE_IO_INSERTION=true
+LANG=0
+RADIX_MODE_SELECT=radix2
+Synthesis_tool=GowinSynthesis

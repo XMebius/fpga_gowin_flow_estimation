@@ -5,6 +5,7 @@
     <Version>5</Version>
     <Device name="GW2A-18C" pn="GW2A-LV18PG256C8/I7">gw2a18c-011</Device>
     <FileList>
+        <File path="src/complex_multiplier/complex_multiplier.v" type="file.verilog" enable="1"/>
         <File path="src/ddr3_memory_interface/DDR3MI.v" type="file.verilog" enable="1"/>
         <File path="src/dvi_tx/DVI_TX_Top.v" type="file.verilog" enable="1"/>
         <File path="src/fifo_hs/video_fifo.v" type="file.verilog" enable="1"/>
@@ -19,6 +20,8 @@
         <File path="src/helai_video_scale/helai_video_scale.v" type="file.verilog" enable="1"/>
         <File path="src/helai_video_scale/ramDualPort.v" type="file.verilog" enable="1"/>
         <File path="src/helai_video_scale/ramFifo.v" type="file.verilog" enable="1"/>
+        <File path="src/integer_division/integer_division.v" type="file.verilog" enable="1"/>
+        <File path="src/integer_multiply_divider/integer_multiply_divider.v" type="file.verilog" enable="1"/>
         <File path="src/ov5640_i2c_master/i2c_config.v" type="file.verilog" enable="1"/>
         <File path="src/ov5640_i2c_master/i2c_master_bit_ctrl.v" type="file.verilog" enable="1"/>
         <File path="src/ov5640_i2c_master/i2c_master_byte_ctrl.v" type="file.verilog" enable="1"/>

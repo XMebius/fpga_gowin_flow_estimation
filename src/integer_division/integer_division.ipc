@@ -1,0 +1,17 @@
+[General]
+ipc_version=4
+file=integer_division
+module=Integer_Division_Top
+target_device=gw2a18c-011
+type=integer_division
+version=1.0
+
+[Config]
+DATA_TYPE=0
+DIVIDEND_DATA_WIDTH=8
+DIVISOR_DATA_WIDTH=8
+FRACTIONAL_DATA_WIDTH=1
+LANG=0
+LATENCY=2
+REMAINDER=with
+Synthesis_tool=GowinSynthesis

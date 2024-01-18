@@ -59,15 +59,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Design File</td>
-<td>Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\impl\gwsynthesis\top.vg</td>
+<td>F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\impl\gwsynthesis\top.vg</td>
 </tr>
 <tr>
 <td class="label">Physical Constraints File</td>
-<td>Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.cst</td>
+<td>F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\top.cst</td>
 </tr>
 <tr>
 <td class="label">Timing Constraints File</td>
-<td>Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\lcd.sdc</td>
+<td>F:\schoolwork\chipdesign\codes\own\fpga_gowin_flow_estimation-main\fpga_gowin_flow_estimation-main\src\lcd.sdc</td>
 </tr>
 <tr>
 <td class="label">Version</td>
@@ -87,7 +87,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Thu Jan 18 17:34:26 2024
+<td>Thu Jan 18 21:49:51 2024
 </td>
 </tr>
 <tr>
@@ -100,7 +100,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <table class="summary_table">
 <tr>
 <td class="label">Total Power (mW)</td>
-<td>827.540</td>
+<td>839.040</td>
 </tr>
 <tr>
 <td class="label">Quiescent Power (mW)</td>
@@ -108,14 +108,14 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Dynamic Power (mW)</td>
-<td>735.778</td>
+<td>747.278</td>
 </tr>
 </table>
 <h2><a name="Thermal_Info">Thermal Information:</a></h2>
 <table class="summary_table">
 <tr>
 <td class="label">Junction Temperature</td>
-<td>51.498</td>
+<td>51.866</td>
 </tr>
 <tr>
 <td class="label">Theta JA</td>
@@ -123,7 +123,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Max Allowed Ambient Temperature</td>
-<td>58.502</td>
+<td>58.134</td>
 </tr>
 </table>
 <h2><a name="Configure_Info">Configure Information:</a></h2>
@@ -192,9 +192,9 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td>VCC</td>
 <td>1.000</td>
-<td>661.222</td>
+<td>672.722</td>
 <td>61.461</td>
-<td>722.683</td>
+<td>734.183</td>
 </tr>
 <tr>
 <td>VCCX</td>
@@ -243,9 +243,9 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td>Logic</td>
-<td>6.042</td>
+<td>6.444</td>
 <td>NA</td>
-<td>10.123</td>
+<td>10.127</td>
 </tr>
 <tr>
 <td>IO</td>
@@ -255,7 +255,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td>BSRAM</td>
-<td>430.372
+<td>440.964
 <td>NA</td>
 <td>NA</td>
 </tr>
@@ -279,9 +279,9 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td>DSP</td>
-<td>35.399
+<td>35.900
 <td>NA</td>
-<td>6.899
+<td>6.991
 </tr>
 </table>
 <h2><a name="By_Hierarchy">Power By Hierarchy:</a></h2>
@@ -293,12 +293,56 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td>top</td>
-<td>878.275</td>
-<td>878.275(878.241)</td>
+<td>889.770</td>
+<td>889.770(889.736)</td>
 <tr>
 <td>top/dut/</td>
-<td>10.643</td>
-<td>10.643(0.000)</td>
+<td>22.182</td>
+<td>22.182(0.354)</td>
+<tr>
+<td>top/dut/div/</td>
+<td>0.354</td>
+<td>0.354(0.354)</td>
+<tr>
+<td>top/dut/div/integer_division_inst/</td>
+<td>0.354</td>
+<td>0.354(0.354)</td>
+<tr>
+<td>top/dut/div/integer_division_inst/integer_division_has_rem_inst/</td>
+<td>0.354</td>
+<td>0.354(0.338)</td>
+<tr>
+<td>top/dut/div/integer_division_inst/integer_division_has_rem_inst/gen_non_restoring[0].non_restoring_division_inst/</td>
+<td>0.010</td>
+<td>0.010(0.000)</td>
+<tr>
+<td>top/dut/div/integer_division_inst/integer_division_has_rem_inst/gen_non_restoring[1].non_restoring_division_inst/</td>
+<td>0.050</td>
+<td>0.050(0.000)</td>
+<tr>
+<td>top/dut/div/integer_division_inst/integer_division_has_rem_inst/gen_non_restoring[2].non_restoring_division_inst/</td>
+<td>0.050</td>
+<td>0.050(0.000)</td>
+<tr>
+<td>top/dut/div/integer_division_inst/integer_division_has_rem_inst/gen_non_restoring[3].non_restoring_division_inst/</td>
+<td>0.050</td>
+<td>0.050(0.000)</td>
+<tr>
+<td>top/dut/div/integer_division_inst/integer_division_has_rem_inst/gen_non_restoring[4].non_restoring_division_inst/</td>
+<td>0.050</td>
+<td>0.050(0.000)</td>
+<tr>
+<td>top/dut/div/integer_division_inst/integer_division_has_rem_inst/gen_non_restoring[5].non_restoring_division_inst/</td>
+<td>0.050</td>
+<td>0.050(0.000)</td>
+<tr>
+<td>top/dut/div/integer_division_inst/integer_division_has_rem_inst/gen_non_restoring[6].non_restoring_division_inst/</td>
+<td>0.050</td>
+<td>0.050(0.000)</td>
+<tr>
+<td>top/dut/div/integer_division_inst/integer_division_has_rem_inst/gen_non_restoring[7].non_restoring_division_inst/</td>
+<td>0.026</td>
+<td>0.026(0.000)</td>
 <tr>
 <td>top/u_DDR3MI/</td>
 <td>457.321</td>
@@ -449,12 +493,12 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>2.510(0.000)</td>
 <tr>
 <td>top/u_helai_video_scale/</td>
-<td>94.662</td>
-<td>94.662(64.390)</td>
+<td>94.628</td>
+<td>94.628(64.355)</td>
 <tr>
 <td>top/u_helai_video_scale/ramRB/</td>
-<td>64.390</td>
-<td>64.390(64.035)</td>
+<td>64.355</td>
+<td>64.355(64.035)</td>
 <tr>
 <td>top/u_helai_video_scale/ramRB/ram_generate[0].ram_inst_i/</td>
 <td>16.009</td>
@@ -477,28 +521,28 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>41.658(0.000)</td>
 <tr>
 <td>top/u_ov5640_i2c/</td>
-<td>0.302</td>
-<td>0.302(0.302)</td>
+<td>0.294</td>
+<td>0.294(0.294)</td>
 <tr>
 <td>top/u_ov5640_i2c/i2c_config_ov5640/</td>
-<td>0.302</td>
-<td>0.302(0.294)</td>
+<td>0.294</td>
+<td>0.294(0.285)</td>
 <tr>
 <td>top/u_ov5640_i2c/i2c_config_ov5640/i2c_master_top_m0/</td>
-<td>0.294</td>
-<td>0.294(0.082)</td>
+<td>0.285</td>
+<td>0.285(0.083)</td>
 <tr>
 <td>top/u_ov5640_i2c/i2c_config_ov5640/i2c_master_top_m0/byte_controller/</td>
-<td>0.082</td>
-<td>0.082(0.066)</td>
+<td>0.083</td>
+<td>0.083(0.067)</td>
 <tr>
 <td>top/u_ov5640_i2c/i2c_config_ov5640/i2c_master_top_m0/byte_controller/bit_controller/</td>
-<td>0.066</td>
-<td>0.066(0.000)</td>
+<td>0.067</td>
+<td>0.067(0.000)</td>
 <tr>
 <td>top/u_ov5640_rx/</td>
-<td>0.088</td>
-<td>0.088(0.000)</td>
+<td>0.087</td>
+<td>0.087(0.000)</td>
 <tr>
 <td>top/u_resize_fifo/</td>
 <td>72.163</td>
@@ -509,16 +553,16 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>72.163(0.000)</td>
 <tr>
 <td>top/u_rgb_gray/</td>
-<td>5.613</td>
-<td>5.613(0.000)</td>
+<td>5.614</td>
+<td>5.614(0.000)</td>
 <tr>
 <td>top/u_tmds_rpll/</td>
 <td>38.834</td>
 <td>38.834(0.000)</td>
 <tr>
 <td>top/video_timing/</td>
-<td>0.253</td>
-<td>0.253(0.000)</td>
+<td>0.252</td>
+<td>0.252(0.000)</td>
 </table>
 <h2><a name="By_Clock_Domain">Power By Clock Domain:</a></h2>
 <table class="detail_table">
@@ -528,14 +572,19 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <th class="label">Total Dynamic Power(mW)</th>
 </tr>
 <tr>
-<td>u_clkdiv/CLKOUT.default_gen_clk</td>
-<td>74.250</td>
-<td>205.803</td>
-</tr>
-<tr>
 <td>u_DDR3MI/gw3_top/i4/fclkdiv/CLKOUT.default_gen_clk</td>
 <td>100.000</td>
 <td>224.223</td>
+</tr>
+<tr>
+<td>u_clkdiv/CLKOUT.default_gen_clk</td>
+<td>74.250</td>
+<td>217.313</td>
+</tr>
+<tr>
+<td>NO CLOCK DOMAIN</td>
+<td>0.000</td>
+<td>0.000</td>
 </tr>
 <tr>
 <td>vtc_vs_out</td>
@@ -543,19 +592,14 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>0.045</td>
 </tr>
 <tr>
-<td>cam_pclk</td>
-<td>100.000</td>
-<td>41.508</td>
-</tr>
-<tr>
 <td>clk</td>
 <td>27.000</td>
-<td>83.309</td>
+<td>83.300</td>
 </tr>
 <tr>
-<td>NO CLOCK DOMAIN</td>
-<td>0.000</td>
-<td>0.000</td>
+<td>cam_pclk</td>
+<td>100.000</td>
+<td>41.507</td>
 </tr>
 <tr>
 <td>u_tmds_rpll/rpll_inst/CLKOUT.default_gen_clk</td>
