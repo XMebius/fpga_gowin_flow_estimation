@@ -119,6 +119,7 @@ wire [23:0] video_scale_data_out ;
 wire [23:0] scaler_fifo_rdout_out;
 wire [23:0] gray_data_in = video_scale_data_out;
 wire [7:0]  gray_data_o;
+wire [7:0]  sp_data_o;
 wire empty            ;
 wire o_vid_fifo_read  ;
 
@@ -295,6 +296,28 @@ RGB2Gray u_rgb_gray(
     .O_pixel_data_valid(gray_out_de),
     .O_pixel_data_Gray(gray_data_o)     // [7:0]
 );
+
+
+// 开辟Gowin_SP并存入
+//top_sp u_top_sp(
+//    .clk(video_clk),
+//    .reset(rst_n),
+//    .pixel_data(gray_data_o),  // 像素数据输入
+//    .pixel_valid(gray_out_de),  // 像素数据有效信号
+//    .current_dout(sp_data_o)  // 当前活跃模块的数据输出
+//);
+
+Gowin_SP u_sp(
+    .dout(sp_data_o), 
+    .clk(video_clk), 
+    .oce(1'b1), 
+    .ce(1'b1), 
+    .reset(rst_n), 
+    .wre(gray_out_de),
+    .ad(11'd0), 
+    .din(gray_data_o)
+);
+
 
 // 视频缓存模块,直接调用的 ideo_Frame_Buffer IP核
 Video_Frame_Buffer_Top u_Video_Frame_Buffer( 

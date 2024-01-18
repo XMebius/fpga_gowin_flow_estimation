@@ -13,6 +13,7 @@
         <File path="src/gowin_rpll/cmos_pll.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/mem_pll.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/sys_pll.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_sp/gowin_sp.v" type="file.verilog" enable="1"/>
         <File path="src/helai_color_move/rgb_display.v" type="file.verilog" enable="1"/>
         <File path="src/helai_color_move/video_block_move.v" type="file.verilog" enable="1"/>
         <File path="src/helai_color_move/video_timing_color.v" type="file.verilog" enable="1"/>
@@ -28,10 +29,11 @@
         <File path="src/ov5640_i2c_master/ov5640_reg_cfg.v" type="file.verilog" enable="1"/>
         <File path="src/ov5640_i2c_master/timescale.v" type="file.verilog" enable="1"/>
         <File path="src/ov5640_rx.v" type="file.verilog" enable="1"/>
+        <File path="src/rgb_gray.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/top_sp.v" type="file.verilog" enable="1"/>
         <File path="src/video_frame_buffer/video_frame_buffer.v" type="file.verilog" enable="1"/>
         <File path="src/video_timing_control.v" type="file.verilog" enable="1"/>
-        <File path="src/rgb_gray.v" type="file.verilog" enable="1"/>
         <File path="src/top.cst" type="file.cst" enable="1"/>
         <File path="src/lcd.sdc" type="file.sdc" enable="1"/>
         <File path="src/top.rao" type="file.gao" enable="0"/>
