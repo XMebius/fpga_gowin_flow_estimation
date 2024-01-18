@@ -149,7 +149,7 @@ wire                      in_Video_Frame_vs   = !video_scale_data_vs;
 
 wire                      gray_in_de   = video_scale_data_de;
 wire                      in_Video_Frame_de   = gray_out_de;
-wire [WR_VIDEO_WIDTH-1:0] in_Video_Frame_data = {8'h00,pro_o};
+wire [WR_VIDEO_WIDTH-1:0] in_Video_Frame_data = {8'h00,sp_data_o};
 
 wire out_Video_Frame_clk = video_clk  ; 
 wire out_Video_Frame_vs  = !vtc_vs_out; 
@@ -317,14 +317,36 @@ RGB2Gray u_rgb_gray(
 //    .ad(11'd0), 
 //    .din(gray_data_o)
 //);
-wire [7:0] pro_o;
-image_processor u_pro(
+//wire [7:0] pro_o;
+//image_processor u_pro(
+//    .clk(video_clk),
+//    .reset(rst_n),
+//    .pixel_data(gray_data_o),
+//    .pixel_valid(gray_out_de),
+//    .pixel_out(pro_o)
+//);
+// 初始化RAM模块
+// reg [7:0] addrA = 0, addrB = 0;
+// //reg weA = 1;
+// always@(posedge video_clk) begin
+//     addrB = addrA;
+//     addrA = addrA + 1; 
+// end
+dsp #(
+    .DATA_WIDTH(8),
+    .ADDRESS_WIDTH(8)
+) dut (
     .clk(video_clk),
-    .reset(rst_n),
-    .pixel_data(gray_data_o),
-    .pixel_valid(gray_out_de),
-    .pixel_out(pro_o)
+    .dataA(gray_data_o),
+    .dataB(8'd0), // B端不写入
+    // .addrA(addrA),
+    // .addrB(addrB),
+    .weA(1'b1),
+    .weB(1'b0), // B端不写入
+    .qA(qA),
+    .qB(sp_data_o)
 );
+
 
 // 视频缓存模块,直接调用的 ideo_Frame_Buffer IP核
 Video_Frame_Buffer_Top u_Video_Frame_Buffer( 

@@ -17,7 +17,7 @@
   "SubInsts" : [
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 368,
+    "InstLine" : 390,
     "InstName" : "u_DDR3MI",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ddr3_memory_interface/DDR3MI.v",
     "ModuleLine" : 1,
@@ -25,7 +25,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 430,
+    "InstLine" : 452,
     "InstName" : "u_HDMI_TX",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/dvi_tx/DVI_TX_Top.v",
     "ModuleLine" : 1,
@@ -225,15 +225,15 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 321,
-    "InstName" : "u_pro",
+    "InstLine" : 338,
+    "InstName" : "dut",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
-    "ModuleLine" : 1,
-    "ModuleName" : "image_processor"
+    "ModuleLine" : 2,
+    "ModuleName" : "dsp"
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 330,
+    "InstLine" : 352,
     "InstName" : "u_Video_Frame_Buffer",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_frame_buffer/video_frame_buffer.v",
     "ModuleLine" : 3785,
@@ -251,7 +251,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 413,
+    "InstLine" : 435,
     "InstName" : "video_timing",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_timing_control.v",
     "ModuleLine" : 10,

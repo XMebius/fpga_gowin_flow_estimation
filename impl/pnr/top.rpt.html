@@ -83,7 +83,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Thu Jan 18 14:51:44 2024
+<td>Thu Jan 18 17:34:26 2024
 </td>
 </tr>
 <tr>
@@ -97,24 +97,24 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td class="label">Place & Route Process</td>
 <td>Running placement:
-   Placement Phase 0: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
-   Placement Phase 1: CPU time = 0h 0m 0.326s, Elapsed time = 0h 0m 0.326s
+   Placement Phase 0: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
+   Placement Phase 1: CPU time = 0h 0m 0.331s, Elapsed time = 0h 0m 0.332s
    Placement Phase 2: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
    Placement Phase 3: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
-   Total Placement: CPU time = 0h 0m 6s, Elapsed time = 0h 0m 6s
+   Total Placement: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s
 Running routing:
    Routing Phase 0: CPU time = 0h 0m 0.002s, Elapsed time = 0h 0m 0.002s
-   Routing Phase 1: CPU time = 0h 0m 0.427s, Elapsed time = 0h 0m 0.428s
+   Routing Phase 1: CPU time = 0h 0m 0.449s, Elapsed time = 0h 0m 0.449s
    Routing Phase 2: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
    Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
    Total Routing: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
 Generate output files:
-   CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
+   CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
 </td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 13s, Elapsed time = 0h 0m 13s, Peak memory usage = 322MB</td>
+<td>CPU time = 0h 0m 15s, Elapsed time = 0h 0m 15s, Peak memory usage = 314MB</td>
 </tr>
 </table>
 <br/>
@@ -129,22 +129,22 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>4463/20736</td>
-<td>22%</td>
+<td>5016/20736</td>
+<td>25%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
-<td>3749(3358 LUT, 391 ALU, 0 ROM16)</td>
+<td>4290(3862 LUT, 428 ALU, 0 ROM16)</td>
 <td>-</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --SSRAM(RAM16)</td>
-<td>119</td>
+<td>121</td>
 <td>-</td>
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>1965/16173</td>
+<td>2042/16173</td>
 <td>13%</td>
 </tr>
 <tr>
@@ -154,8 +154,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as FF</td>
-<td>1961/15552</td>
-<td>13%</td>
+<td>2038/15552</td>
+<td>14%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --I/O Register as Latch</td>
@@ -169,8 +169,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">CLS</td>
-<td>2854/10368</td>
-<td>28%</td>
+<td>3192/10368</td>
+<td>31%</td>
 </tr>
 <tr>
 <td class="label">I/O Port</td>
@@ -179,12 +179,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">I/O Buf</td>
-<td>63</td>
+<td>71</td>
 <td>-</td>
 </tr>
 <tr>
 <td class="label"> &nbsp &nbsp --Input Buf</td>
-<td>5</td>
+<td>13</td>
 <td>-</td>
 </tr>
 <tr>
@@ -204,12 +204,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">BSRAM</td>
-<td>12 SDPB<br/>8 SDPX9B<br/></td>
-<td>44%</td>
+<td>19 SDPB<br/>8 SDPX9B<br/>12 DPB<br/></td>
+<td>85%</td>
 </tr>
 <tr>
 <td class="label">DSP</td>
-<td>2 MULT18X18<br/></td><td>5%</td>
+<td>1 MULT9X9<br/>3 MULT18X18<br/>12 MULTADDALU18X18<br/></td><td>58%</td>
 </tr>
 <tr>
 <td class="label">PLL</td>
@@ -339,12 +339,12 @@ Generate output files:
 <tr>
 <td class="label">cam_pclk_d</td>
 <td>PRIMARY</td>
-<td> TR BR</td>
+<td> TR TL BR</td>
 </tr>
 <tr>
 <td class="label">video_clk</td>
 <td>PRIMARY</td>
-<td> TR TL BR BL</td>
+<td> TR TL BL</td>
 </tr>
 <tr>
 <td class="label">cam_xclk_d</td>
@@ -363,6 +363,11 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">hdmi4_rst_n</td>
+<td>LW</td>
+<td> -</td>
+</tr>
+<tr>
+<td class="label">scaler_fifo_rst_in</td>
 <td>LW</td>
 <td> -</td>
 </tr>
@@ -393,11 +398,6 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">u_DDR3MI/gw3_top/ddr_rst</td>
-<td>LW</td>
-<td> -</td>
-</tr>
-<tr>
-<td class="label">u_DDR3MI/gw3_top/u_gwmc_top/gw_wr_data0/wr_fifo/n28_6</td>
 <td>LW</td>
 <td> -</td>
 </tr>

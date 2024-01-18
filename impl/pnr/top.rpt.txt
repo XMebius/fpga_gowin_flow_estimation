@@ -12,27 +12,27 @@
   <Part Number>: GW2A-LV18PG256C8/I7
   <Device>: GW2A-18
   <Device Version>: C
-  <Created Time>:Thu Jan 18 14:51:44 2024
+  <Created Time>:Thu Jan 18 17:34:26 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
-    Placement Phase 1: CPU time = 0h 0m 0.326s, Elapsed time = 0h 0m 0.326s
+    Placement Phase 0: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
+    Placement Phase 1: CPU time = 0h 0m 0.331s, Elapsed time = 0h 0m 0.332s
     Placement Phase 2: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
     Placement Phase 3: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
-    Total Placement: CPU time = 0h 0m 6s, Elapsed time = 0h 0m 6s
+    Total Placement: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0.002s, Elapsed time = 0h 0m 0.002s
-    Routing Phase 1: CPU time = 0h 0m 0.427s, Elapsed time = 0h 0m 0.428s
+    Routing Phase 1: CPU time = 0h 0m 0.449s, Elapsed time = 0h 0m 0.449s
     Routing Phase 2: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
     Total Routing: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
  Generate output files:
-    CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
+    CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
 
- Total Time and Memory Usage: CPU time = 0h 0m 13s, Elapsed time = 0h 0m 13s, Peak memory usage = 322MB
+ Total Time and Memory Usage: CPU time = 0h 0m 15s, Elapsed time = 0h 0m 15s, Peak memory usage = 314MB
 
 
 3. Resource Usage Summary
@@ -40,18 +40,18 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 4463/20736  22%
-    --LUT,ALU,ROM16           | 3749(3358 LUT, 391 ALU, 0 ROM16)
-    --SSRAM(RAM16)            | 119
-  Register                    | 1965/16173  13%
+  Logic                       | 5016/20736  25%
+    --LUT,ALU,ROM16           | 4290(3862 LUT, 428 ALU, 0 ROM16)
+    --SSRAM(RAM16)            | 121
+  Register                    | 2042/16173  13%
     --Logic Register as Latch | 0/15552  0%
-    --Logic Register as FF    | 1961/15552  13%
+    --Logic Register as FF    | 2038/15552  14%
     --I/O Register as Latch   | 0/621  0%
     --I/O Register as FF      | 4/621  <1%
-  CLS                         | 2854/10368  28%
+  CLS                         | 3192/10368  31%
   I/O Port                    | 78
-  I/O Buf                     | 63
-    --Input Buf               | 5
+  I/O Buf                     | 71
+    --Input Buf               | 13
     --Output Buf              | 38
     --Inout Buf               | 20
   IOLOGIC                     | 62%
@@ -60,11 +60,14 @@
     --OSER8_MEM               | 20
     --OSER10                  | 4
     --IODELAY                 | 40
-  BSRAM                       | 44%
-    --SDPB                    | 12
+  BSRAM                       | 85%
+    --SDPB                    | 19
     --SDPX9B                  | 8
-  DSP                         | 5%
-    --MULT18X18               | 2
+    --DPB                     | 12
+  DSP                         | 58%
+    --MULT9X9                 | 1
+    --MULT18X18               | 3
+    --MULTADDALU18X18         | 12
   PLL                         | 3/4  75%
   DCS                         | 0/8  0%
   DQCE                        | 0/24  0%
@@ -113,19 +116,19 @@
   Signal         | Global Clock   | Location
   -------------------------------------------
   clk_d          | PRIMARY        |  TR TL BR BL
-  cam_pclk_d     | PRIMARY        |  TR BR
-  video_clk      | PRIMARY        |  TR TL BR BL
+  cam_pclk_d     | PRIMARY        |  TR TL BR
+  video_clk      | PRIMARY        |  TR TL BL
   cam_xclk_d     | PRIMARY        |  BR
   dma_clk        | PRIMARY        |  TR TL BR BL
   vtc_vs_out     | PRIMARY        |  TL
   hdmi4_rst_n    | LW             |  -
+  scaler_fifo_rst_in| LW             |  -
   state_led_d[1] | LW             |  -
   state_led_d_9[0]| LW             |  -
   u_helai_video_scale/n48_5| LW             |  -
   u_Video_Frame_Buffer/vfb_ddr3_wrapper_inst/u0_dma_frame_buffer/u_dma_write_ctrl/fifo_write_inst/reset_r[1]| LW             |  -
   u_Video_Frame_Buffer/vfb_ddr3_wrapper_inst/u0_dma_frame_buffer/u_dma_read_ctrl/fifo_read_inst/reset_r[1]| LW             |  -
   u_DDR3MI/gw3_top/ddr_rst| LW             |  -
-  u_DDR3MI/gw3_top/u_gwmc_top/gw_wr_data0/wr_fifo/n28_6| LW             |  -
   serial_clk     | HCLK           | TOP[0]
   memory_clk     | HCLK           | BOTTOM[0] LEFT[0]
   ===========================================
