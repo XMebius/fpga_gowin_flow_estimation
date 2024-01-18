@@ -4,25 +4,20 @@
  <SubModule name="u_cmos_pll"/>
  <SubModule name="u_mem_pll"/>
  <SubModule name="u_ov5640_i2c">
-  <SubModule name="i2c_config_ov5640" Register="13" Lut="38">
-   <SubModule name="i2c_master_top_m0" Register="17" Lut="763">
-    <SubModule name="byte_controller" Register="23" Lut="48">
+  <SubModule name="i2c_config_ov5640" Register="13" Lut="26">
+   <SubModule name="i2c_master_top_m0" Register="17" Lut="723">
+    <SubModule name="byte_controller" Register="23" Lut="49">
      <SubModule name="bit_controller" Register="71" Alu="15" Lut="100"/>
     </SubModule>
    </SubModule>
   </SubModule>
  </SubModule>
- <SubModule name="u_ov5640_rx" Register="33" Alu="7" Lut="12" Ssram="2"/>
- <SubModule name="u_resize_fifo" Register="58" Alu="13" Lut="105" Bsram="6" Ssram="8"/>
- <SubModule name="u_helai_video_scale" Register="136" Alu="54" Lut="198" Dsp="13">
-  <SubModule name="ramRB" Register="11" Alu="10" Lut="402">
-   <SubModule name="ram_generate[0].ram_inst_i" Bsram="3"/>
-   <SubModule name="ram_generate[1].ram_inst_i" Bsram="3"/>
-   <SubModule name="ram_generate[2].ram_inst_i" Bsram="3"/>
-   <SubModule name="ram_generate[3].ram_inst_i" Bsram="3"/>
-  </SubModule>
+ <SubModule name="u_ov5640_rx" Register="16" Alu="7" Lut="10"/>
+ <SubModule name="u_resize_fifo" Register="58" Alu="13" Lut="103" Ssram="8"/>
+ <SubModule name="u_helai_video_scale" Register="100" Alu="40" Lut="163" Dsp="2">
+  <SubModule name="ramRB" Register="3" Lut="8"/>
  </SubModule>
- <SubModule name="u_rgb_gray" Register="2" Lut="8" Dsp="3"/>
+ <SubModule name="u_rgb_gray" Register="2"/>
  <SubModule name="u_Video_Frame_Buffer" Register="362" Alu="42" Lut="598" Bsram="12"/>
- <SubModule name="video_timing" Register="54" Alu="32" Lut="65"/>
+ <SubModule name="video_timing" Register="54" Alu="32" Lut="69"/>
 </Module>

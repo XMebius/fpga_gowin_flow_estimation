@@ -13,7 +13,6 @@
         <File path="src/gowin_rpll/cmos_pll.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/mem_pll.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/sys_pll.v" type="file.verilog" enable="1"/>
-        <File path="src/gowin_sp/gowin_sp.v" type="file.verilog" enable="1"/>
         <File path="src/helai_color_move/rgb_display.v" type="file.verilog" enable="1"/>
         <File path="src/helai_color_move/video_block_move.v" type="file.verilog" enable="1"/>
         <File path="src/helai_color_move/video_timing_color.v" type="file.verilog" enable="1"/>

@@ -94,7 +94,15 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/rgb_gray.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
    "Type" : "verilog"
   },
   {
@@ -103,18 +111,6 @@
   },
   {
    "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_timing_control.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/rgb_gray.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_sp/gowin_sp.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
    "Type" : "verilog"
   }
  ],

@@ -71,8 +71,8 @@ parameter RD_VIDEO_WIDTH      = 32;    //读视频数据位宽
 ////////// 图像缩放控制参数,很重要,只需要改这里就可以控制输出分辨率了
 parameter INPUT_VIDEO_WIDTH   = 640;   // 输入视频宽度
 parameter INPUT_VIDEO_HIGTH   = 480;   // 输入视频高度
-parameter OUTPUT_VIDEO_WIDTH  = 64;   // 输出视频宽度
-parameter OUTPUT_VIDEO_HIGTH  = 64;   // 输出视频高度
+parameter OUTPUT_VIDEO_WIDTH  = 640;   // 输出视频宽度
+parameter OUTPUT_VIDEO_HIGTH  = 480;   // 输出视频高度
 
 wire video_clk;         //video pixel clock
 wire serial_clk;
@@ -149,7 +149,7 @@ wire                      in_Video_Frame_vs   = !video_scale_data_vs;
 
 wire                      gray_in_de   = video_scale_data_de;
 wire                      in_Video_Frame_de   = gray_out_de;
-wire [WR_VIDEO_WIDTH-1:0] in_Video_Frame_data = {8'h00,gray_data_o};
+wire [WR_VIDEO_WIDTH-1:0] in_Video_Frame_data = {8'h00,pro_o};
 
 wire out_Video_Frame_clk = video_clk  ; 
 wire out_Video_Frame_vs  = !vtc_vs_out; 
@@ -298,7 +298,7 @@ RGB2Gray u_rgb_gray(
 );
 
 
-// 开辟Gowin_SP并存入
+ //开辟Gowin_SP并存入
 //top_sp u_top_sp(
 //    .clk(video_clk),
 //    .reset(rst_n),
@@ -307,17 +307,24 @@ RGB2Gray u_rgb_gray(
 //    .current_dout(sp_data_o)  // 当前活跃模块的数据输出
 //);
 
-Gowin_SP u_sp(
-    .dout(sp_data_o), 
-    .clk(video_clk), 
-    .oce(1'b1), 
-    .ce(1'b1), 
-    .reset(rst_n), 
-    .wre(gray_out_de),
-    .ad(11'd0), 
-    .din(gray_data_o)
+//Gowin_SP u_sp(
+//    .dout(sp_data_o), 
+//    .clk(video_clk), 
+//    .oce(1'b1), 
+//    .ce(1'b1), 
+//    .reset(rst_n), 
+//    .wre(gray_out_de),
+//    .ad(11'd0), 
+//    .din(gray_data_o)
+//);
+wire [7:0] pro_o;
+image_processor u_pro(
+    .clk(video_clk),
+    .reset(rst_n),
+    .pixel_data(gray_data_o),
+    .pixel_valid(gray_out_de),
+    .pixel_out(pro_o)
 );
-
 
 // 视频缓存模块,直接调用的 ideo_Frame_Buffer IP核
 Video_Frame_Buffer_Top u_Video_Frame_Buffer( 

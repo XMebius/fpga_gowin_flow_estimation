@@ -34,15 +34,14 @@ Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estima
 Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_i2c_master\timescale.v'
 Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_rx.v'
 WARN  (EX3801) : Parameter 'FRAM_FREE_CNT' becomes localparam in 'ov5640_rx' with formal parameter declaration list("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_rx.v":43)
+Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\rgb_gray.v'
 Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v'
 Undeclared symbol 'hdmi_hpd', assumed default net type 'wire'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":102)
 Undeclared symbol 'cmos_clk', assumed default net type 'wire'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":180)
+Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top_sp.v'
 Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_frame_buffer\video_frame_buffer.v'
 Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_control.v'
-Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\rgb_gray.v'
-Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\gowin_sp\gowin_sp.v'
-Analyzing Verilog file 'Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top_sp.v'
-WARN  (EX3073) : Port 'o_h_dis' remains unconnected for this instance("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":420)
+WARN  (EX3073) : Port 'o_h_dis' remains unconnected for this instance("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":427)
 Compiling module 'top'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":4)
 WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":111)
 Compiling module 'TMDS_rPLL'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\gowin_rpll\TMDS_rPLL.v":9)
@@ -301,7 +300,11 @@ WARN  (EX3670) : Actual bit length 32 differs from formal bit length 25 for port
 WARN  (EX3670) : Actual bit length 32 differs from formal bit length 14 for port 'i_top_offset'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":287)
 WARN  (EX3670) : Actual bit length 32 differs from formal bit length 1 for port 'i_scaler_type'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":288)
 Compiling module 'RGB2Gray'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\rgb_gray.v":5)
-Compiling module 'Gowin_SP'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\gowin_sp\gowin_sp.v":10)
+Compiling module 'image_processor'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top_sp.v":1)
+Extracting RAM for identifier 'ram0'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top_sp.v":15)
+Extracting RAM for identifier 'ram1'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top_sp.v":16)
+WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top_sp.v":41)
+WARN  (EX3791) : Expression size 13 truncated to fit in target size 12("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top_sp.v":50)
 Compiling module 'Video_Frame_Buffer_Top'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_frame_buffer\video_frame_buffer.v":3785)
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_frame_buffer\video_frame_buffer.v":0)
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_frame_buffer\video_frame_buffer.v":0)
@@ -310,8 +313,8 @@ Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimat
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_frame_buffer\video_frame_buffer.v":0)
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_frame_buffer\video_frame_buffer.v":0)
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_frame_buffer\video_frame_buffer.v":0)
-WARN  (EX3670) : Actual bit length 16 differs from formal bit length 32 for port 'I_vin0_data'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":334)
-WARN  (EX3670) : Actual bit length 16 differs from formal bit length 32 for port 'O_vout0_data'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":341)
+WARN  (EX3670) : Actual bit length 16 differs from formal bit length 32 for port 'I_vin0_data'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":341)
+WARN  (EX3670) : Actual bit length 16 differs from formal bit length 32 for port 'O_vout0_data'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":348)
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ddr3_memory_interface\DDR3MI.v":0)
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ddr3_memory_interface\DDR3MI.v":0)
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ddr3_memory_interface\DDR3MI.v":0)
@@ -341,12 +344,12 @@ WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("Y:\Works
 WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_control.v":174)
 WARN  (EX3791) : Expression size 2 truncated to fit in target size 1("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_control.v":181)
 WARN  (EX3791) : Expression size 2 truncated to fit in target size 1("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\video_timing_control.v":187)
-WARN  (EX3670) : Actual bit length 32 differs from formal bit length 11 for port 'i_start_x'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":409)
-WARN  (EX3670) : Actual bit length 32 differs from formal bit length 11 for port 'i_start_y'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":410)
-WARN  (EX3670) : Actual bit length 32 differs from formal bit length 11 for port 'i_disp_h'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":411)
-WARN  (EX3670) : Actual bit length 32 differs from formal bit length 11 for port 'i_disp_v'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":412)
-WARN  (EX3670) : Actual bit length 8 differs from formal bit length 24 for port 'i_rgb'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":413)
-WARN  (EX3670) : Actual bit length 8 differs from formal bit length 24 for port 'o_rgb'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":418)
+WARN  (EX3670) : Actual bit length 32 differs from formal bit length 11 for port 'i_start_x'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":416)
+WARN  (EX3670) : Actual bit length 32 differs from formal bit length 11 for port 'i_start_y'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":417)
+WARN  (EX3670) : Actual bit length 32 differs from formal bit length 11 for port 'i_disp_h'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":418)
+WARN  (EX3670) : Actual bit length 32 differs from formal bit length 11 for port 'i_disp_v'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":419)
+WARN  (EX3670) : Actual bit length 8 differs from formal bit length 24 for port 'i_rgb'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":420)
+WARN  (EX3670) : Actual bit length 8 differs from formal bit length 24 for port 'o_rgb'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":425)
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\dvi_tx\DVI_TX_Top.v":0)
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\dvi_tx\DVI_TX_Top.v":0)
 Compiling module '**'("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\dvi_tx\DVI_TX_Top.v":0)
@@ -356,7 +359,9 @@ WARN  (EX2565) : Input 'cmos_clk_i' on this instance is undriven. Assigning to 0
 NOTE  (EX0101) : Current top module is "top"
 WARN  (EX0211) : The output port "state_led[3]" of module "top" has no driver, assigning undriven bits to Z, simulation mismatch possible("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":23)
 [5%] Running netlist conversion ...
+WARN  (CV0016) : Input cam_data is unused("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":14)
 Running device independent optimization ...
+WARN  (DI0002) : Asynchronous register "mode" initial values do not match with the Gowin library, simulation mismatch possible("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top_sp.v":52)
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed
 [25%] Optimizing Phase 2 completed
@@ -371,8 +376,12 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "ramDualPort" instantiated to "ram_generate[0].ram_inst_i" is swept in optimizing("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_video_scale\ramFifo.v":76)
+WARN  (NL0002) : The module "ramDualPort" instantiated to "ram_generate[1].ram_inst_i" is swept in optimizing("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_video_scale\ramFifo.v":76)
+WARN  (NL0002) : The module "ramDualPort" instantiated to "ram_generate[2].ram_inst_i" is swept in optimizing("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_video_scale\ramFifo.v":76)
+WARN  (NL0002) : The module "ramDualPort" instantiated to "ram_generate[3].ram_inst_i" is swept in optimizing("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_video_scale\ramFifo.v":76)
 WARN  (NL0002) : The module "ov5640_reg_cfg" instantiated to "u_ov5640_reg_cfg" is swept in optimizing("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\ov5640_i2c_master\ov5640_i2c.v":62)
-WARN  (NL0002) : The module "Gowin_SP" instantiated to "u_sp" is swept in optimizing("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":319)
+WARN  (NL0002) : The module "image_processor" instantiated to "u_pro" is swept in optimizing("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":327)
 WARN  (NL0002) : The module "video_block_move" instantiated to "video_block" is swept in optimizing("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\top.v":208)
 WARN  (NL0002) : The module "rgb_display" instantiated to "u_rgb_display" is swept in optimizing("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_color_move\video_block_move.v":67)
 WARN  (NL0002) : The module "video_timing_color" instantiated to "u_video_timing_color" is swept in optimizing("Y:\Workspace\SmartChipSystem\e203\fpga_gowin_flow_estimation\src\helai_color_move\video_block_move.v":47)

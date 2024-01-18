@@ -17,7 +17,7 @@
   "SubInsts" : [
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 361,
+    "InstLine" : 368,
     "InstName" : "u_DDR3MI",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/ddr3_memory_interface/DDR3MI.v",
     "ModuleLine" : 1,
@@ -25,7 +25,7 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 423,
+    "InstLine" : 430,
     "InstName" : "u_HDMI_TX",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/dvi_tx/DVI_TX_Top.v",
     "ModuleLine" : 1,
@@ -225,15 +225,15 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 310,
-    "InstName" : "u_sp",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_sp/gowin_sp.v",
-    "ModuleLine" : 10,
-    "ModuleName" : "Gowin_SP"
+    "InstLine" : 321,
+    "InstName" : "u_pro",
+    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "image_processor"
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 323,
+    "InstLine" : 330,
     "InstName" : "u_Video_Frame_Buffer",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_frame_buffer/video_frame_buffer.v",
     "ModuleLine" : 3785,
@@ -251,53 +251,11 @@
    },
    {
     "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top.v",
-    "InstLine" : 406,
+    "InstLine" : 413,
     "InstName" : "video_timing",
     "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/video_timing_control.v",
     "ModuleLine" : 10,
     "ModuleName" : "video_timing_control"
-   }
-  ]
- },
- {
-  "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
-  "InstLine" : 1,
-  "InstName" : "top_sp",
-  "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
-  "ModuleLine" : 1,
-  "ModuleName" : "top_sp",
-  "SubInsts" : [
-   {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
-    "InstLine" : 24,
-    "InstName" : "sp0",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_sp/gowin_sp.v",
-    "ModuleLine" : 10,
-    "ModuleName" : "Gowin_SP"
-   },
-   {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
-    "InstLine" : 25,
-    "InstName" : "sp1",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_sp/gowin_sp.v",
-    "ModuleLine" : 10,
-    "ModuleName" : "Gowin_SP"
-   },
-   {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
-    "InstLine" : 26,
-    "InstName" : "sp2",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_sp/gowin_sp.v",
-    "ModuleLine" : 10,
-    "ModuleName" : "Gowin_SP"
-   },
-   {
-    "InstFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/top_sp.v",
-    "InstLine" : 27,
-    "InstName" : "sp3",
-    "ModuleFile" : "Y:/Workspace/SmartChipSystem/e203/fpga_gowin_flow_estimation/src/gowin_sp/gowin_sp.v",
-    "ModuleLine" : 10,
-    "ModuleName" : "Gowin_SP"
    }
   ]
  }
